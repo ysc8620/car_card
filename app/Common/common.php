@@ -138,6 +138,8 @@ function get_thumb($img, $suffix = '_thumb') {
                     $thumb = $img . '_480x480.jpg';
                     break;
             }
+        }else{
+            $thumb = $img;
         }
     }
     return $thumb;
