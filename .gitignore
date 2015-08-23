@@ -1,4 +1,5 @@
 .idea
+.idea/
 *.log
 data/runtime
 data/Logs
