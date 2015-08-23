@@ -13,7 +13,7 @@ class brandAction extends backendAction
     protected function _search() {
         $map = array();
         if( $keyword = $this->_request('keyword', 'trim') ){
-            $map['_string'] = "username like '%".$keyword."%' OR email like '%".$keyword."%'";
+            $map['_string'] = "name like '%".$keyword."%'";
         }
         $this->assign('search', array(
             'keyword' => $keyword,
@@ -42,7 +42,6 @@ class brandAction extends backendAction
                 $data['pic'] =  $result['info'][0]['savename'];
                 $this->ajaxReturn(1, L('operation_success'), $data['pic']);
             }
-
 
         } else {
             $this->ajaxReturn(0, L('illegal_parameters'));

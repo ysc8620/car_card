@@ -13,7 +13,7 @@ class user_infoAction extends backendAction
     protected function _search() {
         $map = array();
         if( $keyword = $this->_request('keyword', 'trim') ){
-            $map['_string'] = "username like '%".$keyword."%' OR email like '%".$keyword."%'";
+            $map['_string'] = "username like '%".$keyword."%' OR mobile like '%".$keyword."%'";
         }
         $this->assign('search', array(
             'keyword' => $keyword,
@@ -23,7 +23,7 @@ class user_infoAction extends backendAction
 
     public function _before_index() {
         $big_menu = array(
-            'title' => L('添加会员'),
+            'title' => L('添加车主'),
             'iframe' => U('user_info/add'),
             'id' => 'add',
             'width' => '500',
