@@ -6,14 +6,7 @@
 			<th width="100">车主名称 :</th>
 			<td><input type="text" id="username" name="username" class="input-text" /></td>
 		</tr>
-	    <tr>
-			<th>会员头像 :</th>
-			<td>
-            	<input type="text" name="pic" id="J_pic" class="input-text fl mr10" size="30" value="{$info.pic}">
-            	<div id="J_upload_pic" class="upload_btn"><span>{:L('upload')}</span></div>
-				<notempty name="info['pic']"><span class="attachment_icon J_attachment_icon" file-type="image" file-rel="{$img_dir}{$info.pic}"><img src="__STATIC__/images/filetype/image_s.gif" /></span></notempty>
-            </td>
-		</tr>
+
         <tr>
 			<th>手机 :</th>
 			<td><input type="text" name="mobile" id="mobile" class="input-text" value="{$info.mobile}" size="30"></td>

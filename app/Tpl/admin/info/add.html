@@ -16,7 +16,12 @@
 		</tr>
         <tr>
 			<th>品牌编号 :</th>
-			<td><input type="text" name="brand_id" id="brand_id" class="input-text" value="{$info.brand_id}" size="30"></td>
+			<td><select name="brand_id" class="">
+                <option value="0">未选择</option>
+                <volist name="brand_list" id="brand">
+                <option value="{$brand.id}">{$brand.name}</option>
+                </volist>
+			</select></td>
 		</tr>
 
         <tr>

@@ -226,6 +226,7 @@ class indexAction extends Action {
         $config_data['DB_PORT'] = $temp_info['db_port'];
         $config_data['DB_PREFIX'] = $temp_info['db_prefix'];
         file_put_contents($config_file, "<?php\r\nreturn " . var_export($config_data, true) . ";");
+
         //安装完毕
         $this->_show_process(L('install_successed'), 'parent.install_successed();');
         return false;

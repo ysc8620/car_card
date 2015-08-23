@@ -155,10 +155,50 @@ function object_to_array($obj) {
     return $arr;
 }
 
+/**----------------------------------------------------------
+ * 在数据列表中搜索
++----------------------------------------------------------
+ * @param array $list 数据列表
+ * @param mixed $condition 查询条件
+ * 支持 array('name'=>$value) 或者 name=$value
+ * @return array
+ */
+function list_search($list,$condition) {
+    if(is_string($condition))
+        parse_str($condition,$condition);
+    // 返回的结果集合
+    $resultSet = array();
+    foreach ($list as $key=>$data){
+        $find   =   false;
+        foreach ($condition as $field=>$value){
+            if(isset($data[$field])) {
+                if(0 === strpos($value,'/')) {
+                    $find   =   preg_match($value,$data[$field]);
+                }elseif($data[$field]==$value){
+                    $find = true;
+                }
+            }
+        }
+        if($find)
+            $resultSet[]     =   &$list[$key];
+    }
+    return $resultSet;
+}
+
 function get_brand_name($brand_id){
-    return '宝马';
+    $rs = F('brand_list');
+    if(!$rs){
+        $rs = D('brand')->field('id,name')->order('id asc')->select();
+        F('brand_list', $rs);
+    }
+
+    $data = list_search($rs ,"id=$brand_id");
+
+
+    return $data[0]['name']?$data[0]['name']:'未选择';
 }
 
 function get_car_name($car_id){
-    return 'ss';
+    $rs = M('info')->where( array( 'id'=>  $car_id))->field('name')->select();
+    return $rs[0]['name']?$rs[0]['name']:'未选择';
 }

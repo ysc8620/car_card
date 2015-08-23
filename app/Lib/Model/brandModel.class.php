@@ -14,7 +14,6 @@ class brandModel extends Model
     );
 
     function get_letter(){
-
         return $this->pinyin1($this->data->name);
     }
 

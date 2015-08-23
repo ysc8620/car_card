@@ -32,6 +32,17 @@ class brandAction extends backendAction
         $this->assign('big_menu', $big_menu);
     }
 
+    function _after_insert()
+    {
+        $rs = $this->_mod->field('id,name')->order('id asc')->select();
+        F('brand_list', $rs);
+    }
+
+    function _after_update(){
+        $rs = $this->_mod->field('id,name')->order('id asc')->select();
+        F('brand_list', $rs);
+    }
+
     public function ajax_upload_imgs() {
         //上传图片
         if (!empty($_FILES['pic']['name'])) {

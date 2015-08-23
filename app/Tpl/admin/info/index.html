@@ -42,7 +42,7 @@
                 <td align="center">{$val.id}</td>
                 <td align="center"><img src="{:attach(get_thumb($val['pic'], ''), 'car')}" style="max-height: 100px; max-width: 150px;" /></td>
                 <td align="left"><span data-tdtype="edit" data-field="name" data-id="{$val.id}" class="tdedit">{$val.name}</span></td>
-                <td align="left">{:get_brand_name($val.brand_id)}</span></td>
+                <td align="left">{:get_brand_name($val['brand_id'])}</span></td>
                 <td align="right"><span data-tdtype="edit" data-field="sort" data-id="{$val.id}" class="tdedit">{$val.sort}</span></td>
                 <td align="center"><img data-tdtype="toggle" data-id="{$val.id}" data-field="state" data-value="{$val.state}" src="__STATIC__/images/admin/toggle_<if condition="$val.state eq 0">disabled<else/>enabled</if>.gif" /></td>
                 <td align="center">
