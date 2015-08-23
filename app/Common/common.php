@@ -158,3 +158,7 @@ function object_to_array($obj) {
 function get_brand_name($brand_id){
     return '宝马';
 }
+
+function get_car_name($car_id){
+    return 'ss';
+}

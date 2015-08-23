@@ -13,7 +13,7 @@ class infoAction extends backendAction
     protected function _search() {
         $map = array();
         if( $keyword = $this->_request('keyword', 'trim') ){
-            $map['_string'] = "username like '%".$keyword."%' OR email like '%".$keyword."%'";
+            $map['_string'] = "name like '%".$keyword."%' ";
         }
         $this->assign('search', array(
             'keyword' => $keyword,
