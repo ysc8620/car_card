@@ -37,7 +37,7 @@ class indexAction extends backendAction {
         }
         $this->assign('message', $message);
         $system_info = array(
-            'pinphp_version' => PIN_VERSION . ' RELEASE '. PIN_RELEASE .' [<a href="http://www.pinphp.com/" class="blue" target="_blank">查看最新版本</a>]',
+            'pinphp_version' => PIN_VERSION . ' RELEASE '. PIN_RELEASE .' [<a href="http://www.php369.com/" class="blue" target="_blank">查看最新版本</a>]',
             'server_domain' => $_SERVER['SERVER_NAME'] . ' [ ' . gethostbyname($_SERVER['SERVER_NAME']) . ' ]',
             'server_os' => PHP_OS,
             'web_server' => $_SERVER["SERVER_SOFTWARE"],

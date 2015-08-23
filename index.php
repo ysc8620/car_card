@@ -3,9 +3,9 @@ if (!is_file('./data/install.lock')) {
     header('Location: ./install.php');
     exit;
 }
-/* 当前PinPHP程序版本 */
+/* 当前车名片程序版本 */
 define('PIN_VERSION', '3.0');
-/* 当前PinPHP程序Release */
+/* 当前车名片程序Release */
 define('PIN_RELEASE', '20121127');
 /* 应用名称*/
 define('APP_NAME', 'app');

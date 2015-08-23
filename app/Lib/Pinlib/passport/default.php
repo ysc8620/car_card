@@ -15,10 +15,10 @@ class default_passport
     public function get_info() {
         return array(
             'code' => 'default', //插件代码必须和文件名保持一致
-            'name' => 'PinPHP', //整合插件名称
-            'desc' => 'PinPHP 默认会员系统',
+            'name' => '车名片', //整合插件名称
+            'desc' => '车名片 默认会员系统',
             'version' => '1.0', //整合插件的版本
-            'author' => 'PinPHP TEAM', //开发者
+            'author' => '车名片 TEAM', //开发者
         );
     }
 

@@ -4,7 +4,7 @@ return array(
     'code'      => 'taobao',
     'name'      => '淘宝/天猫',
     'desc'      => '通过淘宝开放平台获取商品数据，可到 http://open.taobao.com/ 查看详细',
-    'author'    => 'PinPHP TEAM',
+    'author'    => '车名片 TEAM',
     'domain'   => 'http://www.taobao.com,http://www.tianmao.com',
     'version'   => '1.0',
     'config'    => array(

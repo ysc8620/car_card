@@ -84,7 +84,7 @@ return array(
 
     //后台首页
     'system_info' => '系统信息',
-    'pinphp_version' => 'PinPHP 版本',
+    'pinphp_version' => '车名片 版本',
     'server_domain' => '服务器域名/IP',
     'server_os' => '服务器操作系统',
     'web_server' => 'Web 服务器',

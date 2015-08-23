@@ -4,7 +4,7 @@ return array(
     'code'      => 'qq',
     'name'      => 'QQ登录',
     'desc'      => '申请地址：http://connect.opensns.qq.com/',
-    'author'    => 'PinPHP TEAM',
+    'author'    => '车名片 TEAM',
     'version'   => '1.0',
     'config'    => array(
         'app_key'   => array(

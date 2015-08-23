@@ -1,0 +1,110 @@
+<!--添加会员-->
+<div class="dialog_content">
+	<form id="info_form" action="{:u('user/add')}" method="post">
+	<table width="100%" class="table_form">
+		<tr>
+			<th width="100">品牌名称 :</th>
+			<td><input type="text" id="name" name="name" class="input-text" /></td>
+		</tr>
+	    <tr>
+			<th>品牌图片 :</th>
+			<td>
+            	<input type="text" name="pic" id="J_pic" class="input-text fl mr10" size="30" value="{$info.img}">
+            	<div id="J_upload_pic" class="upload_btn"><span>{:L('upload')}</span></div>
+				<notempty name="info['pic']"><span class="attachment_icon J_attachment_icon" file-type="image" file-rel="{$img_dir}{$info.pic}"><img src="__STATIC__/images/filetype/image_s.gif" /></span></notempty>
+            </td>
+		</tr>
+        <tr>
+			<th>品牌链接 :</th>
+			<td><input type="text" name="url" id="url" class="input-text" value="{$info.url}" size="30"></td>
+		</tr>
+		<tr>
+        	<th>热门推荐 :</th>
+            <td>
+            	<label><input type="radio" name="is_hot" value="1" <if condition="$info.is_hot eq 1">checked</if>> 是</label>&nbsp;&nbsp;
+				<label><input type="radio" name="is_hot" value="0" <if condition="$info.is_hot eq 0">checked</if>> 否</label>
+            </td>
+        </tr>
+        
+        <tr>
+			<th>排序 :</th>
+			<td><input type="sort" name="sort" class="input-text" value="{$info.sort}" size="30"></td>
+		</tr>
+
+	    <tr>
+			<th>{:L('enabled')} :</th>
+			<td>
+				<label><input type="radio" name="status" value="1" <if condition="$info.state eq 1">checked</if>> {:L('yes')}</label>&nbsp;&nbsp;
+				<label><input type="radio" name="status" value="0" <if condition="$info.state eq 0">checked</if>> {:L('no')}</label>
+			</td>
+		</tr>
+	</table>
+	<input type="hidden" name="id" value="{$info.id}" />
+	</form>
+</div>
+<script src="__STATIC__/js/fileuploader.js"></script>
+<script>
+
+var check_name_url = "{:U('brand/ajax_check_name')}";
+$(function(){
+	$.formValidator.initConfig({formid:"info_form",autotip:true});
+	$("#name").formValidator({onshow:'请填写品牌名称',onfocus:'请填写品牌名称'}).inputValidator({min:1,onerror:'请填写品牌名称'}).ajaxValidator({
+	    type : "get",
+		url : check_name_url,
+		datatype : "json",
+		async:'false',
+		success : function(result){	
+            if(result.status == 0){
+                return false;
+			}else{
+                return true;
+			}
+		},
+		onerror : '品牌已经存在',
+		onwait : '正在检测'
+	}).defaultPassed();
+
+	$('#info_form').ajaxForm({success:complate,dataType:'json'});
+	function complate(result){
+		if(result.status == 1){
+			$.dialog.get(result.dialog).close();
+            $.pinphp.tip({content:result.msg});
+            window.location.reload();
+		} else {
+			$.pinphp.tip({content:result.msg, icon:'alert'});
+		}
+	}
+	
+	//上传图片
+    var uploader = new qq.FileUploaderBasic({
+    	allowedExtensions: ['jpg','gif','jpeg','png','bmp','pdg'],
+        button: document.getElementById('J_upload_img'),
+        multiple: false,
+        action: "{:U('brand/ajax_upload_imgs')}",
+        inputName: 'pic',
+        forceMultipart: true, //用$_FILES
+        messages: {
+        	typeError: lang.upload_type_error,
+        	sizeError: lang.upload_size_error,
+        	minSizeError: lang.upload_minsize_error,
+        	emptyError: lang.upload_empty_error,
+        	noFilesError: lang.upload_nofile_error,
+        	onLeave: lang.upload_onLeave
+        },
+        showMessage: function(message){
+        	$.pinphp.tip({content:message, icon:'error'});
+        },
+        onSubmit: function(id, fileName){
+        	$('#J_upload_pic').addClass('btn_disabled').find('span').text(lang.uploading);
+        },
+        onComplete: function(id, fileName, result){
+        	$('#J_upload_pic').removeClass('btn_disabled').find('span').text(lang.upload);
+            if(result.status == '1'){
+        		$('#J_pic').val(result.data);
+        	} else {
+        		$.pinphp.tip({content:result.msg, icon:'error'});
+        	}
+        }
+    });
+});
+</script>

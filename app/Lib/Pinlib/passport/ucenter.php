@@ -14,7 +14,7 @@ class ucenter_passport
             'name' => 'UCenter', //整合插件名称
             'desc' => 'UCenter',
             'version' => '2.0', //整合插件的版本
-            'author' => 'PinPHP TEAM', //开发者
+            'author' => '车名片 TEAM', //开发者
             // 插件默认配置
             'config' => array(
                 'uc_config' => array(

@@ -465,7 +465,7 @@ CREATE TABLE `pin_article_page` (
   PRIMARY KEY (`cate_id`)
 ) COLLATE='utf8_general_ci' ENGINE=MyISAM;
 INSERT INTO pin_article_page ( `cate_id`, `title`, `info`, `seo_title`, `seo_keys`, `seo_desc`, `last_time` ) VALUES  ('2','关于我们','<div>
-	欢迎来到PinPHP－拼品网， 拼品网是一个技术驱动创造时尚的互联网创业型公司，通过搜索引擎、图形处理、视觉搜索等核心技术研发优势，为中国千百万的个人站长提供一个解决如何快速抢建一个社会化的电子商务导购平台，它可以帮助爱美丽的女生找到适合的穿衣搭配、在哪里购买合适的时装搭配网购社区平台；我们将致力于为每一个时尚女孩都能轻松地创建属于自己的搭配宝典库而矢志不移的奉献青春年华。
+	欢迎来到车名片－拼品网， 拼品网是一个技术驱动创造时尚的互联网创业型公司，通过搜索引擎、图形处理、视觉搜索等核心技术研发优势，为中国千百万的个人站长提供一个解决如何快速抢建一个社会化的电子商务导购平台，它可以帮助爱美丽的女生找到适合的穿衣搭配、在哪里购买合适的时装搭配网购社区平台；我们将致力于为每一个时尚女孩都能轻松地创建属于自己的搭配宝典库而矢志不移的奉献青春年华。
 </div>
 <div>
 	<br />
@@ -553,7 +553,7 @@ INSERT INTO pin_article_page ( `cate_id`, `title`, `info`, `seo_title`, `seo_key
 	<br />
 </p>
 <p>
-	积分是为了答谢支持PinPHP网站会员而制定的一种奖励方式，您可以进入账户中的积分页面查看积分明细，同时PinPHP会推出各类积分兑换活动，请随时关注关于积分的活动告知。
+	积分是为了答谢支持车名片网站会员而制定的一种奖励方式，您可以进入账户中的积分页面查看积分明细，同时车名片会推出各类积分兑换活动，请随时关注关于积分的活动告知。
 </p>
 <p>
 	<br />
@@ -571,19 +571,19 @@ INSERT INTO pin_article_page ( `cate_id`, `title`, `info`, `seo_title`, `seo_key
 	<br />
 </p>
 <p>
-	2、每日登录：会员每日首次登录PinPHP网站能获得10积分，每日上限5次；
+	2、每日登录：会员每日首次登录车名片网站能获得10积分，每日上限5次；
 </p>
 <p>
 	<br />
 </p>
 <p>
-	3、发布分享：会员分享新商品到PinPHP网站能获得20积分，每日上限10次；
+	3、发布分享：会员分享新商品到车名片网站能获得20积分，每日上限10次；
 </p>
 <p>
 	<br />
 </p>
 <p>
-	4、添加喜欢：针对PinPHP网站上的商品会员点击喜欢可获得1积分，每日上限10次；
+	4、添加喜欢：针对车名片网站上的商品会员点击喜欢可获得1积分，每日上限10次；
 </p>
 <p>
 	<br />
@@ -595,13 +595,13 @@ INSERT INTO pin_article_page ( `cate_id`, `title`, `info`, `seo_title`, `seo_key
 	<br />
 </p>
 <p>
-	6、转发分享：会员转发PinPHP网站上商品到其他网站上可获2积分，每日上限10次；
+	6、转发分享：会员转发车名片网站上商品到其他网站上可获2积分，每日上限10次；
 </p>
 <p>
 	<br />
 </p>
 <p>
-	7、发布评论：会员评论PinPHP网站商品可获1积分，每日上线5次。
+	7、发布评论：会员评论车名片网站商品可获1积分，每日上线5次。
 </p>
 <p>
 	<br />
@@ -629,7 +629,7 @@ INSERT INTO pin_article_page ( `cate_id`, `title`, `info`, `seo_title`, `seo_key
 </div>','','','','0');
 INSERT INTO pin_article_page ( `cate_id`, `title`, `info`, `seo_title`, `seo_keys`, `seo_desc`, `last_time` ) VALUES  ('7','兑换说明','1、奖品价格已经包含邮寄费用在内，您无须另行支付。兑奖前请确认您的帐户中有足够数量的积分！<br />
 2、奖品寄送方式：QQ直充类奖品兑奖审核通过后会直接充入您的QQ号码中，其余虚拟奖品采用在线发送卡密的方式；实体奖品全部采用快递方式。<br />
-3、虚拟奖品有效期：虚拟卡密类奖品除手机充值卡10/20/30元卡密，因为充值卡金额少，有效期比较短，大约一周左右,其余卡密类奖品有效期为1个月；虚拟卡直冲类为即时发货即时到账，无有效期限制！积分兑换含有有效期的奖品，请尽快充值使用，如过有效期未充值导致卡密失效，PinPHP网概不负责。<br />
+3、虚拟奖品有效期：虚拟卡密类奖品除手机充值卡10/20/30元卡密，因为充值卡金额少，有效期比较短，大约一周左右,其余卡密类奖品有效期为1个月；虚拟卡直冲类为即时发货即时到账，无有效期限制！积分兑换含有有效期的奖品，请尽快充值使用，如过有效期未充值导致卡密失效，车名片网概不负责。<br />
 4、确认您的奖品邮寄地址、联系电话正确无误后提交兑奖申请！如因您未提供详细信息或信息错误，导致奖品错投或无法寄送，网站不负任何责任，并不再补发奖品。<br />
 5、实物奖品将在兑奖提交后的2-5工作日内发出(奖品状态您可通过“积分订单”查询)！<br />
 6、实物奖品按照会员申请的要求发出去之后，无破损、短缺等质量问题或因个人喜好（色泽、外观）要求退换货将无法受理。<br />
@@ -671,7 +671,7 @@ CREATE TABLE `pin_flink` (
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) COLLATE='utf8_general_ci' ENGINE=MyISAM;
-INSERT INTO pin_flink ( `id`, `name`, `img`, `url`, `cate_id`, `ordid`, `status` ) VALUES  ('1','PinPHP','','http://www.pinphp.com','1','0','1');
+INSERT INTO pin_flink ( `id`, `name`, `img`, `url`, `cate_id`, `ordid`, `status` ) VALUES  ('1','车名片','','http://www.pinphp.com','1','0','1');
 INSERT INTO pin_flink ( `id`, `name`, `img`, `url`, `cate_id`, `ordid`, `status` ) VALUES  ('2','羽绒衣','','http://www.yurongyi.com','1','0','1');
 DROP TABLE IF EXISTS `pin_flink_cate`;
 CREATE TABLE `pin_flink_cate` (
@@ -1796,7 +1796,7 @@ CREATE TABLE `pin_item_site` (
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) COLLATE='utf8_general_ci' ENGINE=MyISAM;
-INSERT INTO pin_item_site ( `id`, `code`, `name`, `domain`, `url`, `desc`, `config`, `author`, `ordid`, `status` ) VALUES  ('5','taobao','淘宝','taobao.com,tianmao.com,tmall.com','http://www.taobao.com','通过淘宝开放平台获取商品数据，可到 http://open.taobao.com/ 查看详细','a:3:{s:7:\"app_key\";s:8:\"12504724\";s:10:\"app_secret\";s:32:\"9d6877190386092d4288dcae32811081\";s:9:\"taoke_pid\";s:8:\"16185888\";}','PinPHP TEAM','255','1');
+INSERT INTO pin_item_site ( `id`, `code`, `name`, `domain`, `url`, `desc`, `config`, `author`, `ordid`, `status` ) VALUES  ('5','taobao','淘宝','taobao.com,tianmao.com,tmall.com','http://www.taobao.com','通过淘宝开放平台获取商品数据，可到 http://open.taobao.com/ 查看详细','a:3:{s:7:\"app_key\";s:8:\"12504724\";s:10:\"app_secret\";s:32:\"9d6877190386092d4288dcae32811081\";s:9:\"taoke_pid\";s:8:\"16185888\";}','车名片 TEAM','255','1');
 DROP TABLE IF EXISTS `pin_item_tag`;
 CREATE TABLE `pin_item_tag` (
   `item_id` int(10) unsigned NOT NULL,
@@ -2705,9 +2705,9 @@ CREATE TABLE `pin_oauth` (
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) COLLATE='utf8_general_ci' ENGINE=MyISAM;
-INSERT INTO pin_oauth ( `id`, `code`, `name`, `config`, `desc`, `author`, `ordid`, `status` ) VALUES  ('4','qq','QQ登录','a:2:{s:7:\"app_key\";s:9:\"100330010\";s:10:\"app_secret\";s:32:\"098381fd5d6a89f44127d61f0f2645da\";}','申请地址：http://connect.opensns.qq.com/','PinPHP TEAM','2','1');
-INSERT INTO pin_oauth ( `id`, `code`, `name`, `config`, `desc`, `author`, `ordid`, `status` ) VALUES  ('7','sina','微博登陆','a:2:{s:7:\"app_key\";s:10:\"3115666660\";s:10:\"app_secret\";s:32:\"e59677c031210b6d063a2661b6a895cf\";}','申请地址：http://open.weibo.com/','PinPHP TEAM','1','1');
-INSERT INTO pin_oauth ( `id`, `code`, `name`, `config`, `desc`, `author`, `ordid`, `status` ) VALUES  ('8','taobao','淘宝登录','a:2:{s:7:\"app_key\";s:8:\"21270789\";s:10:\"app_secret\";s:32:\"0c28536510e0b0b429750f478222d549\";}','申请地址：http://open.taobao.com/','PinPHP TEAM','3','1');
+INSERT INTO pin_oauth ( `id`, `code`, `name`, `config`, `desc`, `author`, `ordid`, `status` ) VALUES  ('4','qq','QQ登录','a:2:{s:7:\"app_key\";s:9:\"100330010\";s:10:\"app_secret\";s:32:\"098381fd5d6a89f44127d61f0f2645da\";}','申请地址：http://connect.opensns.qq.com/','车名片 TEAM','2','1');
+INSERT INTO pin_oauth ( `id`, `code`, `name`, `config`, `desc`, `author`, `ordid`, `status` ) VALUES  ('7','sina','微博登陆','a:2:{s:7:\"app_key\";s:10:\"3115666660\";s:10:\"app_secret\";s:32:\"e59677c031210b6d063a2661b6a895cf\";}','申请地址：http://open.weibo.com/','车名片 TEAM','1','1');
+INSERT INTO pin_oauth ( `id`, `code`, `name`, `config`, `desc`, `author`, `ordid`, `status` ) VALUES  ('8','taobao','淘宝登录','a:2:{s:7:\"app_key\";s:8:\"21270789\";s:10:\"app_secret\";s:32:\"0c28536510e0b0b429750f478222d549\";}','申请地址：http://open.taobao.com/','车名片 TEAM','3','1');
 DROP TABLE IF EXISTS `pin_score_item`;
 CREATE TABLE `pin_score_item` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
