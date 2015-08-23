@@ -21,7 +21,7 @@
 
                 <option value="0">未选择</option>
                 <volist name="brand_list" id="brand">
-                <option value="{$brand.id}">{$brand.name}</option>
+                <option value="{$brand.id}" <if condition="$brand['id'] eq $info['brand_id']">selected</if> >{$brand.name}</option>
                 </volist>
             </select></td>
         </tr>
