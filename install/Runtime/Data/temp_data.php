@@ -1,0 +1,1 @@
+{"db_host":"localhost","db_port":"3306","db_user":"root","db_pass":"LEsc2008","db_name":"card","force_install":"1","db_prefix":"car_","admin_user":"admin","admin_pass":"admin","admin_pass_confirm":"admin","admin_email":"admin@163.com"}
