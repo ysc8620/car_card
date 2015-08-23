@@ -1,6 +1,6 @@
 <!--添加会员-->
 <div class="dialog_content">
-	<form id="info_form" action="{:u('user/add')}" method="post">
+	<form id="info_form" action="{:u('brand/add')}" method="post">
 	<table width="100%" class="table_form">
 		<tr>
 			<th width="100">品牌名称 :</th>
@@ -11,7 +11,7 @@
 			<td>
             	<input type="text" name="pic" id="J_pic" class="input-text fl mr10" size="30" value="{$info.img}">
             	<div id="J_upload_pic" class="upload_btn"><span>{:L('upload')}</span></div>
-				<notempty name="info['pic']"><span class="attachment_icon J_attachment_icon" file-type="image" file-rel="{$img_dir}{$info.pic}"><img src="__STATIC__/images/filetype/image_s.gif" /></span></notempty>
+				<notempty name="info['pic']"><span class="attachment_icon J_attachment_icon" file-type="image" file-rel="{:attach(get_thumb($info['pic'], '_m'), 'brand')}"><img src="__STATIC__/images/filetype/image_s.gif" /></span></notempty>
             </td>
 		</tr>
         <tr>
@@ -78,7 +78,7 @@ $(function(){
 	//上传图片
     var uploader = new qq.FileUploaderBasic({
     	allowedExtensions: ['jpg','gif','jpeg','png','bmp','pdg'],
-        button: document.getElementById('J_upload_img'),
+        button: document.getElementById('J_upload_pic'),
         multiple: false,
         action: "{:U('brand/ajax_upload_imgs')}",
         inputName: 'pic',

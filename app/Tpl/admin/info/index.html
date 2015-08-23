@@ -8,7 +8,7 @@
                 <td>
                 <div class="explain_col">
                     <input type="hidden" name="g" value="admin" />
-                    <input type="hidden" name="m" value="brand" />
+                    <input type="hidden" name="m" value="info" />
                     <input type="hidden" name="a" value="index" />
                     <input type="hidden" name="menuid" value="{$menuid}" />
                     &nbsp;关键字 :
@@ -21,19 +21,17 @@
     </table>
     </form>
 
-    <div class="J_tablelist table_list" data-acturi="{:U('brand/ajax_edit')}">
+    <div class="J_tablelist table_list" data-acturi="{:U('info/ajax_edit')}">
     <table width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th width=25><input type="checkbox" id="checkall_t" class="J_checkall"></th>
-                <th width="80"><span data-tdtype="order_by" data-field="id">ID</span></th>
+                <th width="60"><span data-tdtype="order_by" data-field="id">ID</span></th>
                 <th width="80">图标</th>
-                <th align="left"><span data-tdtype="order_by" data-field="name">品牌</span></th>
-                <th width="180" align="left"><span data-tdtype="order_by" data-field="email">链接</span></th>
-                <th width="80"><span data-tdtype="order_by" data-field="letter">首字母</span></th>
-                <th width="80"><span data-tdtype="order_by" data-field="is_hot">热门推荐</span></th>
-                <th width="80"><span data-tdtype="order_by" data-field="sort">排序</span></th>
-                <th width="80"><span data-tdtype="order_by" data-field="state">{:L('status')}</span></th>
+                <th align="left"><span data-tdtype="order_by" data-field="name">车型名称</span></th>
+                <th width="120" align="left">品牌</th>
+                <th width="100" align="right"><span data-tdtype="order_by" data-field="sort">排序</span></th>
+                <th width="60"><span data-tdtype="order_by" data-field="state">{:L('status')}</span></th>
                 <th width="80">{:L('operations_manage')}</th>
             </tr>
         </thead>
@@ -42,27 +40,20 @@
             <tr>
                 <td align="center"><input type="checkbox" class="J_checkitem" value="{$val.id}"></td>
                 <td align="center">{$val.id}</td>
-                <td align="center"><img src="{:attach(get_thumb($val['pic'], ''), 'brand')}" style="max-height: 100px; max-width: 100px;" /></td>
+                <td align="center"><img src="{:attach(get_thumb($val['pic'], ''), 'car')}" style="max-height: 100px; max-width: 150px;" /></td>
                 <td align="left"><span data-tdtype="edit" data-field="name" data-id="{$val.id}" class="tdedit">{$val.name}</span></td>
-                <td align="left">{$val.url}</td>
-                <td align="left"><span data-tdtype="edit" data-field="letter" data-id="{$val.id}" class="tdedit">{$val.letter}</span></td>
-
-                <td align="center">
-                  <if condition="$val['is_hot'] eq '1'">是</if>
-                  <if condition="$val['is_hot'] eq '0'">否</if>
-                </td>
-                <td align="center"><span data-tdtype="edit" data-field="sort" data-id="{$val.id}" class="tdedit">{$val.sort}</span></td>
-
+                <td align="left">{:get_brand_name($val.brand_id)}</span></td>
+                <td align="right"><span data-tdtype="edit" data-field="sort" data-id="{$val.id}" class="tdedit">{$val.sort}</span></td>
                 <td align="center"><img data-tdtype="toggle" data-id="{$val.id}" data-field="state" data-value="{$val.state}" src="__STATIC__/images/admin/toggle_<if condition="$val.state eq 0">disabled<else/>enabled</if>.gif" /></td>
                 <td align="center">
-                <a href="javascript:;" class="J_showdialog" data-uri="{:u('brand/edit', array('id'=>$val['id'], 'menuid'=>$menuid))}" data-title="编辑-{$val.name}" data-id="edit" data-width="520" data-height="330">编辑</a> | <a href="javascript:void(0);" class="J_confirmurl" data-uri="{:u('brand/delete', array('id'=>$val['id']))}" data-acttype="ajax" data-msg="{:sprintf(L('confirm_delete_one'),$val['name'])}">{:L('delete')}</a></td>
+                <a href="javascript:;" class="J_showdialog" data-uri="{:u('info/edit', array('id'=>$val['id'], 'menuid'=>$menuid))}" data-title="编辑-{$val.name}" data-id="edit" data-width="520" data-height="330">编辑</a> | <a href="javascript:void(0);" class="J_confirmurl" data-uri="{:u('info/delete', array('id'=>$val['id']))}" data-acttype="ajax" data-msg="{:sprintf(L('confirm_delete_one'),$val['name'])}">{:L('delete')}</a></td>
             </tr>
             </volist>
     	</tbody>
     </table>
     <div class="btn_wrap_fixed">
         <label class="select_all"><input type="checkbox" name="checkall" class="J_checkall">{:L('select_all')}/{:L('cancel')}</label>
-        <input type="button" class="btn" data-tdtype="batch_action" data-acttype="ajax" data-uri="{:U('brand/delete')}" data-name="id" data-msg="{:L('confirm_delete')}" value="{:L('delete')}" />
+        <input type="button" class="btn" data-tdtype="batch_action" data-acttype="ajax" data-uri="{:U('info/delete')}" data-name="id" data-msg="{:L('confirm_delete')}" value="{:L('delete')}" />
         <div id="pages">{$page}</div>
     </div>
 

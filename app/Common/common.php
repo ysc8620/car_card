@@ -154,3 +154,7 @@ function object_to_array($obj) {
     }
     return $arr;
 }
+
+function get_brand_name($brand_id){
+    return '宝马';
+}

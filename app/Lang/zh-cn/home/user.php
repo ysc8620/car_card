@@ -41,6 +41,10 @@ return array(
     'password_length_error' => '密码长度错误，应保持在6-20位之间',
     'edit_password_success' => '修改密码成功！',
 
+    'brandname_require'=>'品牌名已经存在',
+    'brandname_exists'=>'品牌名已经存在',
+    'brandname_length_error'=>'品牌名已经存在',
+
     'base_info' => '基本资料',
     'change_avatar' => '修改头像',
     'location' => '所在地',
