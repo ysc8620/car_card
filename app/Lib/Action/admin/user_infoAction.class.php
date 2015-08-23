@@ -31,7 +31,17 @@ class user_infoAction extends backendAction
         );
         $this->assign('big_menu', $big_menu);
     }
+    public function _before_add(){
+        get_brand_name(1);
+        $rs = F('brand_list');
+        $this->assign('brand_list', $rs);
+    }
 
+    public function _before_edit(){
+        get_brand_name(1);
+        $rs = F('brand_list');
+        $this->assign('brand_list', $rs);
+    }
 
     public function ajax_upload_imgs() {
         //上传图片

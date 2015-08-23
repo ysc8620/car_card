@@ -12,7 +12,6 @@ class brandModel extends Model
         array('addtime','time',1,'function'), //注册时间
     );
 
-
     /**
      * 修改用户名
      */

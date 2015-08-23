@@ -198,7 +198,7 @@ select{ vertical-align:middle;background:none repeat scroll 0 0 #F9F9F9;border-c
 /*头部*/
 #header { background:#3A6DA4; height:49px; overflow:hidden;}
 #header .logo{float:left;margin-right:20px; padding:8px 0 0 0;}
-#header .logo a{display:block;text-decoration: none;height:40px; width:140px; background:url(bgimg/logo.gif) no-repeat;}
+#header .logo a{display:block;text-decoration: none;height:40px; width:140px; background:url(bgimg/logo.png) no-repeat;}
 #header .nav{ display:inline-block; height:34px; position:relative; margin-top:15px;}
 #header .col-auto{ overflow:visible}
 #header .nav li,
