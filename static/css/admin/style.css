@@ -405,3 +405,4 @@ body { _margin:0; _height:100%; }/*IE6 BUG*/
 /* 附件tip */
 .attachment_icon{ margin-left:8px; position:relative;}
 .attachment_tip{ border:1px #CCC solid; position:absolute; left:16px; top:16px; display:none; padding:1px; z-index:9;}
+.attachment_tip img{ max-width: 200px; max-height: 150px;}
