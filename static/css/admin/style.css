@@ -152,7 +152,7 @@ select{ vertical-align:middle;background:none repeat scroll 0 0 #F9F9F9;border-c
 .login_body{background:#3a6ea5;}
 .login_table{width:450px;height:140px;margin:150px auto 0;}
 .login_table td.logo{width:210px;background:url(bgimg/login_bg.gif) no-repeat right;}
-.login_table td.logo h1{width:200px;height:54px;overflow:hidden;background:url(bgimg/logo.gif) no-repeat; text-indent:-9999px;}
+.login_table td.logo h1{width:200px;height:54px;overflow:hidden;background:url(bgimg/logo.png) no-repeat; text-indent:-9999px;}
 .login_table td.logo p{color:#e0e0e0;line-height:25px;}
 .login_table td.loginform{padding:28px 0 0 25px;vertical-align:top;}
 .login_table td.loginform table th{color:#FFF;font-weight:normal; height:38px; padding-right:5px;}
