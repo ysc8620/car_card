@@ -992,5 +992,5 @@ body{background-color:#fff}
 .gg-top .gg-btn-download{width:68px;height:23px;line-height:23px;background:#ECECEC;border:1px solid #0069C9;color:#0069C9;text-align:center;border-radius:3px;float:right;font-size:1.2rem;margin:17px 20px 0 0}
 
 /*新加部分*/
-.card_remark{ margin:6px; font-size:14px;}
+.card_remark{ margin:6px; font-size:14px; clear:both;}
 .card_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:20px; text-align:center; background:#fff; margin:6px;}
