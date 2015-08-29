@@ -15,8 +15,8 @@
 @media only screen and (-webkit-min-device-pixel-ratio :2) and (device-aspect-ratio:2/3) and (orientation :portrait){.fixed-nav{display:none}
 }
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit}
-html{font-size:60.5%}
-body{font-family:Helvetica,Arial,sans-serif;line-height:150%;color:#333}
+html{font-size:65.5%;}
+body{font-family:Helvetica,Arial,sans-serif;line-height:150%;color:#333; background:#f0f0f2;}
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
 legend{display:none}
@@ -947,7 +947,7 @@ body{background-color:#fff}
 .sort-clear{color:#666;font-size:1.4rem;overflow:hidden;line-height:20px;padding:12px 0 12px 0;background-color:#fff}
 .sort-clear{margin:0}
 .bg-fff{background-color:#fff!important}
-.wrap{background-color:#fff}
+.wrap{background-color:#f0f0f2}
 .sort-car{font-size:1.2rem}
 .sort-car li a{height:58px;line-height:20px}
 .sort-car li a span{width:75px;height:25px;display:block;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_all_car.png) no-repeat;background-size:225px auto;margin:8px auto 0}
@@ -992,4 +992,5 @@ body{background-color:#fff}
 .gg-top .gg-btn-download{width:68px;height:23px;line-height:23px;background:#ECECEC;border:1px solid #0069C9;color:#0069C9;text-align:center;border-radius:3px;float:right;font-size:1.2rem;margin:17px 20px 0 0}
 
 /*新加部分*/
-
+.card_remark{ margin:6px; font-size:14px;}
+.card_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:20px; text-align:center; background:#fff; margin:6px;}
