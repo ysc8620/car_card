@@ -312,10 +312,10 @@ body{background:#F2F2F2!important}
 .m-no-result dd{font-size:1.2rem;color:#999}
 .footer-box{overflow:hidden;background:#fff;padding:10px 0 0}
 .ad-bottom-line img{width:100%;display:block}
-.footer{width:100%;height:45px;line-height:45px;background:#333;font-size:1.2rem;position:relative;z-index:1}
+.footer{width:100%;height:45px;line-height:45px;background:#f8f8f8;font-size:1.2rem;position:relative;z-index:1; border-top:#ccc 1px solid;}
 .footer em{color:#444}
-.footer a{color:#999;padding:0 10px}
-.footer a.current{color:#fff}
+.footer a{color:#666;padding:0 10px}
+.footer a.current{color:#999}
 .footer .left-part{float:left}
 .footer .right-part{float:right}
 .footer .ico-yjdc{position:relative}
@@ -947,7 +947,7 @@ body{background-color:#fff}
 .sort-clear{color:#666;font-size:1.4rem;overflow:hidden;line-height:20px;padding:12px 0 12px 0;background-color:#fff}
 .sort-clear{margin:0}
 .bg-fff{background-color:#fff!important}
-.wrap{background-color:#f0f0f2}
+.wrap{background-color:#f7f7f7; text-align:center;}
 .sort-car{font-size:1.2rem}
 .sort-car li a{height:58px;line-height:20px}
 .sort-car li a span{width:75px;height:25px;display:block;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_all_car.png) no-repeat;background-size:225px auto;margin:8px auto 0}
@@ -992,5 +992,8 @@ body{background-color:#fff}
 .gg-top .gg-btn-download{width:68px;height:23px;line-height:23px;background:#ECECEC;border:1px solid #0069C9;color:#0069C9;text-align:center;border-radius:3px;float:right;font-size:1.2rem;margin:17px 20px 0 0}
 
 /*新加部分*/
-.card_remark{ margin:6px; font-size:14px; clear:both;}
-.card_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:20px; text-align:center; background:#fff; margin:6px;}
+.card_remark{ margin:6px; font-size:14px; clear:both; text-align:left; line-height:18px;}
+.card_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:20px; text-align:center; background:#fff; margin:6px auto;}
+.card_block div{ font-size:14px; line-height:20px;}
+.card_block div.remark{ margin-top:14px; margin-bottom:14px;}
+.card_block div em{ font-size:20px; font-weight:bold; }
