@@ -15,7 +15,7 @@
 @media only screen and (-webkit-min-device-pixel-ratio :2) and (device-aspect-ratio:2/3) and (orientation :portrait){.fixed-nav{display:none}
 }
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit}
-html{font-size:62.5%}
+html{font-size:80%}
 body{font-family:Helvetica,Arial,sans-serif;line-height:150%;color:#333}
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
@@ -36,7 +36,7 @@ img{max-width:100%}
 video{margin-left:auto;margin-right:auto;max-width:100%}
 .wrap{padding:0 10px}
 .wrap-b10{padding-bottom:10px}
-.header{width:100%;height:44px;background:#F8F8F8;position:relative;z-index:91;color:#565656; border-bottom:solid #ccc 1px}
+.header{width:100%;height:44px;background:#F8F8F8;position:relative;z-index:91;color:#565656; border:solid #ccc 1px}
 .header .logo{width:85px;height:33px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat 0 0;background-size:100px auto;float:left;text-indent:-999em;margin:7px 0 0 10px}
 .header .user-out,.header .user-in{width:30px;height:30px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat;background-size:100px auto;float:right;margin:7px 10px 0 0;position:relative}
 .header .user-out{background-position:0 -38px}
@@ -990,3 +990,5 @@ body{background-color:#fff}
 .gg-top dd{font-size:1.2rem;color:#999}
 .gg-top .gg-btn-close{width:15px;height:15px;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/ad_app_top_close.png) no-repeat;background-size:15px 15px;float:right;text-indent:-999em;margin:22px 10px 0 0}
 .gg-top .gg-btn-download{width:68px;height:23px;line-height:23px;background:#ECECEC;border:1px solid #0069C9;color:#0069C9;text-align:center;border-radius:3px;float:right;font-size:1.2rem;margin:17px 20px 0 0}
+
+/*新加部分*/
