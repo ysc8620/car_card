@@ -6,4 +6,8 @@ class indexAction extends frontendAction {
 
         $this->display();
     }
+
+    public function qrcode(){
+        $this->display();
+    }
 }
