@@ -10,6 +10,12 @@ error_reporting(0);
 $id = $_REQUEST['id'];
 $r = $_REQUEST['r'];
 $file = "qrcode/$id/$r.png";
+
+if(is_file($file)){
+    header("content-type: image/png");
+    echo file_get_contents($file);
+    die();
+}
 mkdir(dirname($file), 0755,true);
 include 'phpqrcode/phpqrcode.php';
 $value = "http://iyoukou.com/card?id=$id&r=$r"; //二维码内容
@@ -17,10 +23,10 @@ $errorCorrectionLevel = 'L';//容错级别
 $matrixPointSize = 6;//生成图片大小
 //生成二维码图片
 QRcode::png($value,$file, $errorCorrectionLevel, $matrixPointSize, 2);
-$logo = FALSE;//准备好的logo图片
-$QR = 'qrcode.png';//已经生成的原始二维码图
+//$logo = FALSE;//准备好的logo图片
+//$QR = 'qrcode.png';//已经生成的原始二维码图
 header("content-type: image/png");
-echo file_get_contents($QR);
+echo file_get_contents($file);
 //if ($logo !== FALSE) {
 //    $QR = imagecreatefromstring(file_get_contents($QR));
 //    $logo = imagecreatefromstring(file_get_contents($logo));
