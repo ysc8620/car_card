@@ -30,7 +30,5 @@ class cardAction extends frontendAction {
         }else{
             return $this->redirect('/');
         }
-
-
     }
 }
