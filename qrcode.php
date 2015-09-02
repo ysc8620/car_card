@@ -20,9 +20,9 @@ if(is_file($file)){
 mkdir(dirname($file), 0755,true);
 include 'phpqrcode/phpqrcode.php';
 if($t){
-$value = "http://iyoukou.com/card?id=$id&r=$r"; //二维码内容
+$value = "http://iyoukou.com/info?id=$id&r=$r"; //二维码内容
 }else{
-    $value = "http://iyoukou.com/info?id=$id&r=$r"; //二维码内容
+    $value = "http://iyoukou.com/card?id=$id&r=$r"; //二维码内容
 }
 $errorCorrectionLevel = 'L';//容错级别
 $matrixPointSize = 6;//生成图片大小
