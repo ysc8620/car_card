@@ -19,8 +19,8 @@ if(is_file($file)){
 }
 mkdir(dirname($file), 0755,true);
 include 'phpqrcode/phpqrcode.php';
-if($t){
-$value = "http://iyoukou.com/info?id=$id&r=$r"; //二维码内容
+if($t == '1'){
+    $value = "http://iyoukou.com/info?id=$id&r=$r"; //二维码内容
 }else{
     $value = "http://iyoukou.com/card?id=$id&r=$r"; //二维码内容
 }
