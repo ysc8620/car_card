@@ -9,6 +9,7 @@
 error_reporting(0);
 $id = $_REQUEST['id'];
 $r = $_REQUEST['r'];
+$t = $_REQUEST['t'];
 $file = "qrcode/$id/$r.png";
 
 if(is_file($file)){
@@ -18,7 +19,11 @@ if(is_file($file)){
 }
 mkdir(dirname($file), 0755,true);
 include 'phpqrcode/phpqrcode.php';
+if($t){
 $value = "http://iyoukou.com/card?id=$id&r=$r"; //二维码内容
+}else{
+    $value = "http://iyoukou.com/info?id=$id&r=$r"; //二维码内容
+}
 $errorCorrectionLevel = 'L';//容错级别
 $matrixPointSize = 6;//生成图片大小
 //生成二维码图片
