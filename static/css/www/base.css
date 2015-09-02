@@ -997,6 +997,7 @@ body{background-color:#fff}
 
 /*新加部分*/
 .card_remark{ margin:6px; font-size:14px; clear:both; text-align:left; line-height:18px;}
+.card_msg_remark{ margin:6px; font-size:14px; clear:both; text-align:center; line-height:18px;}
 .card_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:20px; text-align:center; background:#fff; margin:6px auto;}
 .card_block div{ font-size:14px; line-height:20px;}
 .card_block div.remark{ margin-top:14px; margin-bottom:14px;}
