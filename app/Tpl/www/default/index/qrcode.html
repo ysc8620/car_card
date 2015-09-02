@@ -20,7 +20,7 @@ div.page{ margin:0 auto; padding:3px; text-align:center;  font-family: "微软�
 	<tr>
         </if>
 		<td width="265" height="265" align="center" valign="middle" bgcolor="#f2f2f2">
-			<span><img src="/qrcode.php?id={$item['id']}&r={$item['rand_card_num']}" width="110" height="110" /></span>
+			<span><img src="/qrcode.php?id={$item['id']}&r={$item['rand_card_num']}" width="150" height="150" /></span>
 			<span>
 		  <h2>扫码一键呼叫车主</h2></span>
 			<span>或致电 400-110-12345</span>
@@ -32,7 +32,7 @@ div.page{ margin:0 auto; padding:3px; text-align:center;  font-family: "微软�
     </volist>
 </table>
 
-<br />>
+<br /><br /><br /><br />
 <table border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" >
     <for start="0" end="12"  step="1" >
 
@@ -45,7 +45,7 @@ div.page{ margin:0 auto; padding:3px; text-align:center;  font-family: "微软�
             <tr>
         </if>
         <td width="265" height="265" align="center" valign="middle" bgcolor="#f2f2f2">
-            <span><img src="/info.php?id={$list[$j-$m]['id']}&r={$list[$j-$m]['rand_info_num']}" width="110" height="110" /></span>
+            <span><img src="/info.php?id={$list[$j-$m]['id']}&r={$list[$j-$m]['rand_info_num']}" width="150" height="150" /></span>
 			<span>
 		   <h2>扫码管理车主号码</h2></span>
             <span>{$list[$j-$m]['id']}</span>
