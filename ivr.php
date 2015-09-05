@@ -3,6 +3,8 @@
 //被咨询的号码，应用未上线需要先在控制台-测试号码里进行绑定后才能呼叫，否则提示呼叫受限
 $number='15818547788';
 
+$db = require_once("./data/config/db.php");
+
 function logss($log){
     $fp = fopen("./log.log",'a+');
     fwrite($fp, $log."\r\n");
@@ -105,16 +107,15 @@ function firstget()
         </Response>";
     }
 else{
-    $conn = mysql_connect('localhost', 'root', 'ntucdbs911') or die('error');
-    mysql_fetch_assoc('card') or die('error');
+    global $db;
+    $conn = mysql_connect($db['DB_HOST'], $db['DB_USER'],  $db['DB_PWD']) or die('error');
+    mysql_select_db($db['DB_NAME']) or die('error');
     mysql_query('SET NAMES utf8');
     $digits = intval($digits);
     $res = mysql_query("SELECT u.mobile FROM c_call_number c,c_user_info u WHERE c.id='{$digits}' AND u.id = c.info_id  LIMIT 1");
     $row = mysql_fetch_assoc($res);
-
     mysql_close($conn);
-
-if($row['mobile']){
+    if($row['mobile']){
     $number = $row['mobile'];
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
