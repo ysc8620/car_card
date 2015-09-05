@@ -2,7 +2,7 @@
 .brand-list li{padding:10px 0;overflow:hidden;border-bottom:1px solid #E2E2E2}
 .brand-list li:last-child{border:0}
 .brand-list li a{display:block;overflow:hidden}
-.brand-logo{display:block;width:55px;height:55px;background:url(http://img3.bitautoimg.com/car/logo/01.png) no-repeat;float:left;margin-right:15px}
+.brand-logo{display:block;width:55px;height:55px;background:url(img/01.png) no-repeat;float:left;margin-right:15px}
 .brand-list li .brand-name{font-size:1.8rem;float:left;height:57px;line-height:57px}
 .brand-hot{overflow:hidden;font-size:1.4rem}
 .brand-hot ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
@@ -37,12 +37,12 @@ video{margin-left:auto;margin-right:auto;max-width:100%}
 .wrap{padding:0 10px}
 .wrap-b10{padding-bottom:10px}
 .header{width:100%;height:44px;background:#F8F8F8;position:relative;z-index:91;color:#565656; border:solid #ccc 1px}
-.header .logo{width:85px;height:33px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat 0 0;background-size:100px auto;float:left;text-indent:-999em;margin:7px 0 0 10px}
-.header .user-out,.header .user-in{width:30px;height:30px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat;background-size:100px auto;float:right;margin:7px 10px 0 0;position:relative}
+.header .logo{width:85px;height:33px;background:url(img/m_header_nav_search.png) no-repeat 0 0;background-size:100px auto;float:left;text-indent:-999em;margin:7px 0 0 10px}
+.header .user-out,.header .user-in{width:30px;height:30px;background:url(img/m_header_nav_search.png) no-repeat;background-size:100px auto;float:right;margin:7px 10px 0 0;position:relative}
 .header .user-out{background-position:0 -38px}
 .header .user-in{background-position:-30px -38px}
 .header .user-in i{width:9px;height:9px;background:#e64340;border-radius:9px;position:absolute;top:2px;right:-2px}
-.header .btn-search{width:50px;height:28px;border:1px solid #d2d2d2;border-radius:20px;float:right;margin:7px 10px 0 0;background:#FFF url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat 6px -118px;background-size:100px auto;text-indent:-999em}
+.header .btn-search{width:50px;height:28px;border:1px solid #d2d2d2;border-radius:20px;float:right;margin:7px 10px 0 0;background:#FFF url(img/m_header_nav_search.png) no-repeat 6px -118px;background-size:100px auto;text-indent:-999em}
 .header .btn-nav{font-size:1.6rem;height:44px;line-height:44px;float:right;margin:0 10px}
 .header .btn-nav i{display:inline-block;width:0;height:6px;border:6px solid #666;border-color:#666 transparent;border-width:6px 6px 0 6px;margin:0 0 0 3px;vertical-align:-4px}
 .header .btn-nav-show{color:#0A4E8A}
@@ -59,20 +59,20 @@ video{margin-left:auto;margin-right:auto;max-width:100%}
 .b-return span{font-size:1.7rem}
 .b-return .opt{font-size:1.5rem;position:absolute;right:10px;color:#FFF;top:0}
 .b-return .opt a{float:left;color:#FFF;margin-left:10px}
-.b-return .btn-return{width:39px;height:39px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat -78px -76px;background-size:100px auto;position:absolute;top:0;left:0;text-indent:-999em}
+.b-return .btn-return{width:39px;height:39px;background:url(img/m_header_nav_search.png) no-repeat -78px -76px;background-size:100px auto;position:absolute;top:0;left:0;text-indent:-999em}
 .b-return h1{display:inline}
-.b-news-favorites{width:40px;height:39px;position:absolute;top:0;right:42px;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_news_share.png) no-repeat 9px 8px;background-size:50px auto;text-indent:-999em}
+.b-news-favorites{width:40px;height:39px;position:absolute;top:0;right:42px;background:url(img/m_header_news_share.png) no-repeat 9px 8px;background-size:50px auto;text-indent:-999em}
 .b-news-favorites-add{background-position:9px -23px}
-.b-news-share{width:40px;height:40px;position:absolute;top:0;right:0;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_news_share.png) no-repeat 9px -59px;background-size:50px auto;text-indent:-999em;z-index:15}
+.b-news-share{width:40px;height:40px;position:absolute;top:0;right:0;background:url(img/m_header_news_share.png) no-repeat 9px -59px;background-size:50px auto;text-indent:-999em;z-index:15}
 .b-news-share-show{background-color:#083E6E;border-left:1px solid #04325B}
 .b-news-share-list{width:118px;background:#083E6E;position:absolute;top:39px;right:0;z-index:14}
-.b-news-share-list a{display:block;height:43px;line-height:43px;color:#FFF;font-size:1.4rem;border-top:1px solid #04325B;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_news_share.png) no-repeat;background-size:50px auto;padding:0 0 0 25px}
+.b-news-share-list a{display:block;height:43px;line-height:43px;color:#FFF;font-size:1.4rem;border-top:1px solid #04325B;background:url(img/m_header_news_share.png) no-repeat;background-size:50px auto;padding:0 0 0 25px}
 .b-news-share-list a.sinaweibo{background-position:15px -94px}
 .b-news-share-list a.qzone{background-position:15px -130px}
 .b-news-share-list a.qqweibo{background-position:15px -169px}
 .ico-triangle-br{width:0;height:0;border-width:4px 4px;border-style:solid;border-color:transparent #fff #ffffff transparent;position:absolute;bottom:4px;right:4px;z-index:16}
-.b-news-edit{width:40px;height:40px;position:absolute;top:0;right:0;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_news_share.png) no-repeat 9px -207px;background-size:50px auto;text-indent:-999em}
-.b-video-share{width:20px;height:18px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_share.png) no-repeat;background-size:20px 18px;position:absolute;top:10px;right:15px}
+.b-news-edit{width:40px;height:40px;position:absolute;top:0;right:0;background:url(img/m_header_news_share.png) no-repeat 9px -207px;background-size:50px auto;text-indent:-999em}
+.b-video-share{width:20px;height:18px;background:url(img/ico_share.png) no-repeat;background-size:20px 18px;position:absolute;top:10px;right:15px}
 .p-search{width:100%;height:100%;background:#FFF;position:absolute;top:0;left:0;z-index:99}
 .p-search-h{width:100%;height:45px;background:#F8F8F8;border-bottom:1px solid #CCC;display:table}
 .p-search .btn-close{display:table-cell;font-size:1.8rem;width:40px;text-align:center;padding:0 18px;vertical-align:middle}
@@ -90,7 +90,7 @@ video{margin-left:auto;margin-right:auto;max-width:100%}
 .p-search-input-box{display:table-cell;vertical-align:middle}
 .p-search-input-relative{position:relative}
 .p-search-input{width:100%;height:31px;line-height:31px;border:1px solid #BFBFBF;border-top-right-radius:20px!important;border-bottom-right-radius:20px!important;font-size:1.4rem;padding:0 0 0 10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;background-image:none}
-.p-search-input-cancel{width:20px;height:20px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_header_nav_search2.png) no-repeat 2px -72px;background-size:100px auto;text-indent:-999em;position:absolute;top:5px;right:6px}
+.p-search-input-cancel{width:20px;height:20px;background:url(img/m_header_nav_search.png) no-repeat 2px -72px;background-size:100px auto;text-indent:-999em;position:absolute;top:5px;right:6px}
 input[type="search"]::-webkit-search-cancel-button{display:none}
 input[type="search"]::-ms-clear{display:none}
 .scroll-block{height:40px;line-height:40px;overflow:hidden;overflow-x:scroll;background:#F8F8F8;border-bottom:1px solid #E4E4E4;-webkit-overflow-scrolling:touch;-ms-overflow-style:none;padding:0 10px;position:relative}
@@ -137,10 +137,10 @@ body{background:#F2F2F2!important}
 .tt-first-no-bd{border-bottom:0;margin-bottom:-15px;box-shadow:none}
 .tt-first h3{color:#2F2F2F;padding:0 0 0 15px;font-weight:bold;float:left}
 .tt-first .opt-more{position:absolute;right:15px;bottom:0;font-size:1.4rem}
-.tt-first .opt-more a{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_right.png) no-repeat right center;background-size:6px 11px;color:#3369B1;padding-right:11px;display:block;line-height:50px;vertical-align:middle}
+.tt-first .opt-more a{background:url(img/ico_arrow_right.png) no-repeat right center;background-size:6px 11px;color:#3369B1;padding-right:11px;display:block;line-height:50px;vertical-align:middle}
 .tt-first .opt-more-gray a{color:#666;font-size:1.4rem}
 .tt-first .opt-refresh{position:absolute;right:15px;bottom:0;font-size:1.4rem}
-.tt-first .opt-refresh a{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_refresh.png) no-repeat right center;background-size:12px 12px;color:#666;padding-right:19px;display:block;line-height:50px;vertical-align:middle}
+.tt-first .opt-refresh a{background:url(img/ico_refresh.png) no-repeat right center;background-size:12px 12px;color:#666;padding-right:19px;display:block;line-height:50px;vertical-align:middle}
 .tt-first .opt-city{position:absolute;right:15px;bottom:0;font-size:1.3rem}
 .tt-first .opt-city a{color:#666;position:relative;border:1px solid #DEDEDE;border-radius:3px;padding:5px 12px}
 .tt-first .opt-city i{width:0;height:0;border-width:4px 4px;border-style:solid;border-color:transparent #DEDEDE #DEDEDE transparent;position:absolute;bottom:2px;right:2px;z-index:2}
@@ -179,28 +179,28 @@ body{background:#F2F2F2!important}
 .pic-txt li em{font-size:1.2rem;color:#B7B7B7;display:block;margin:8px 0 0}
 .pic-txt-video li a{margin:0 auto}
 .pic-txt-video li span{display:block;position:relative;overflow:hidden}
-.pic-txt-video li span i{width:20px;height:20px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_ico_video_w.png) no-repeat;background-size:20px 20px;position:absolute;left:5px;bottom:5px}
+.pic-txt-video li span i{width:20px;height:20px;background:url(img/m_ico_video_w.png) no-repeat;background-size:20px 20px;position:absolute;left:5px;bottom:5px}
 .pic-txt-video li p{height:38px;overflow:hidden;text-overflow:ellipsis;text-overflow:-o-ellipsis-lastline;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.pic-txt-video li em i{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_video_num.png) no-repeat left center;background-size:8px 10px;padding:0 0 0 13px;margin-right:15px}
-.pic-txt-video li em i.time{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_video_time.png) no-repeat left center;background-size:12px 12px;padding-left:17px}
+.pic-txt-video li em i{background:url(img/ico_video_num.png) no-repeat left center;background-size:8px 10px;padding:0 0 0 13px;margin-right:15px}
+.pic-txt-video li em i.time{background:url(img/ico_video_time.png) no-repeat left center;background-size:12px 12px;padding-left:17px}
 .pic-txt-car{position:relative}
 .pic-txt-car p{height:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pic-txt-car b{font-size:1.3rem;color:#DD2727;display:block;margin:4px 0 0}
 .pic-txt-car li em{margin-top:3px}
 .btn-more{width:100%;height:50px;line-height:50px;background:#fff;border-top:1px solid #EDEDED;text-align:center;display:block;font-size:1.4rem;color:#666}
-.btn-more i{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_right_s.png) no-repeat right center;background-size:6px 11px;padding-right:12px}
-.btn-add-more i{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_down_s.png) no-repeat right center;background-size:11px 6px;padding-right:17px}
+.btn-more i{background:url(img/ico_arrow_right_s.png) no-repeat right center;background-size:6px 11px;padding-right:12px}
+.btn-add-more i{background:url(img/ico_arrow_down_s.png) no-repeat right center;background-size:11px 6px;padding-right:17px}
 .m-pages{height:34px;line-height:34px;position:relative;font-size:1.5rem;padding:10px 15px 0;background:#fff}
 .m-pages-pre,.m-pages-next{display:block;width:80px;height:32px;background:#fff;border:1px solid #D2D2D2;color:#3369B1;text-align:center;border-radius:3px}
 .m-pages-pre{float:left}
 .m-pages-next{float:right}
 .m-pages-none{color:#B7B7B7}
 .m-pages-num{width:101px;height:32px;background:#fff;border:1px solid #D2D2D2;position:absolute;top:10px;left:50%;margin-left:-51px;color:#666;border-radius:3px}
-.m-pages-num-arrow{width:32px;height:100%;border-left:1px solid #D2D2D2;float:right;text-align:center;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_down.png) no-repeat center center;background-size:13px 8px}
+.m-pages-num-arrow{width:32px;height:100%;border-left:1px solid #D2D2D2;float:right;text-align:center;background:url(img/ico_arrow_down.png) no-repeat center center;background-size:13px 8px}
 .m-pages-num-con{width:68px;height:100%;text-align:center;float:left}
 .m-pages select{width:103px;height:34px;position:absolute;top:10px;left:50%;margin-left:-51px;opacity:0}
 .change-car-top{height:44px;line-height:44px;background:#fff;border-bottom:1px solid #ECECEC;font-size:1.6rem;overflow:hidden;position:relative;display:block;color:#333;padding:0 35px 0 70px;text-align:right}
-.change-car-top:after{display:block;position:absolute;top:50%;margin-top:-7px;right:15px;width:8px;height:14px;content:'';background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_right.png) no-repeat;background-size:8px 14px;font-size:0;line-height:0;color:transparent}
+.change-car-top:after{display:block;position:absolute;top:50%;margin-top:-7px;right:15px;width:8px;height:14px;content:'';background:url(img/ico_arrow_right.png) no-repeat;background-size:8px 14px;font-size:0;line-height:0;color:transparent}
 .change-car-top span{padding:0;position:absolute;top:0;left:15px}
 .change-car-top strong{font-size:1.4rem;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block}
 .change-car-top-none strong{color:#b7b7b7}
@@ -211,14 +211,14 @@ body{background:#F2F2F2!important}
 .card-news .img-box{width:90px;height:60px;float:left;margin-right:10px;position:relative}
 .card-news .img-box img{display:block;width:100%}
 .card-news .img-box b{width:15px;height:15px;line-height:15px;text-align:center;font-size:1.2rem;color:#fff;background:#DD2727;position:absolute;top:0;left:0}
-.card-news .img-box i{width:20px;height:20px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/m_ico_video_w.png) no-repeat;background-size:20px 20px;position:absolute;left:5px;bottom:5px}
+.card-news .img-box i{width:20px;height:20px;background:url(img/m_ico_video_w.png) no-repeat;background-size:20px 20px;position:absolute;left:5px;bottom:5px}
 .card-news h4{font-size:1.6rem;line-height:20px}
 .card-news-h h4{height:45px}
 .card-news em{font-size:1.2rem;color:#B7B7B7;display:block;margin:1px 0 0}
 .card-news em span{padding-right:10px}
-.card-news em i{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_video_num.png) no-repeat left center;background-size:8px 10px;padding:0 0 0 12px;margin-right:12px}
-.card-news em i.ico-comment{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_comment.png) no-repeat 0 3px;background-size:13px auto;padding:0 0 0 18px;margin-right:0;float:right}
-.card-news em i.time{background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_video_time.png) no-repeat left center;background-size:12px 12px;padding-left:16px}
+.card-news em i{background:url(img/ico_video_num.png) no-repeat left center;background-size:8px 10px;padding:0 0 0 12px;margin-right:12px}
+.card-news em i.ico-comment{background:url(img/ico_comment.png) no-repeat 0 3px;background-size:13px auto;padding:0 0 0 18px;margin-right:0;float:right}
+.card-news em i.time{background:url(img/ico_video_time.png) no-repeat left center;background-size:12px 12px;padding-left:16px}
 .card-news .news-xj{position:relative}
 .card-news .news-xj span{font-size:1.2rem;color:#fff;background:#5A8DD2;border-radius:2px;overflow:hidden;height:16px;line-height:16px;width:58px;text-align:center;display:block}
 .card-news .news-xj h4{margin-top:3px}
@@ -243,7 +243,7 @@ body{background:#F2F2F2!important}
 .pic-txt-h strong{color:#c00}
 .pic-txt-h p em{font-size:1.2rem;background:#EC4131;color:#fff;padding:0 1px}
 .pic-txt-h p b{color:#3DA600;margin:0 0 0 10px}
-.pic-txt-h p b.ico-down{background:url(http://img4.bitautoimg.com/uimg/mbt/images/m_ico_arrow_down.gif) no-repeat left center;background-size:10px 10px;padding:0 0 0 11px}
+.pic-txt-h p b.ico-down{background:url(img/m_ico_arrow_down.gif) no-repeat left center;background-size:10px 10px;padding:0 0 0 11px}
 .pic-txt-h li.none h4,.pic-txt-h li.none p,.pic-txt-h li.none strong{color:#bbb}
 .pic-txt-h li.none em{color:#fff;background:#bbb}
 .pic-txt-9060 li{padding-bottom:14px;margin-top:15px}
@@ -278,7 +278,7 @@ font-size: 23px;
 .m-txt-list{background:#fff;font-size:1.6rem}
 .m-txt-list li{border-top:1px solid #EDEDED;padding:0 15px}
 .m-txt-list li a{display:block;height:50px;line-height:50px;position:relative;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:10px}
-.m-txt-list li a:after{display:block;position:absolute;top:20px;right:0;width:6px;height:11px;content:'';background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_right_s.png) no-repeat;background-size:6px 11px;font-size:0;line-height:0;color:transparent}
+.m-txt-list li a:after{display:block;position:absolute;top:20px;right:0;width:6px;height:11px;content:'';background:url(img/ico_arrow_right_s.png) no-repeat;background-size:6px 11px;font-size:0;line-height:0;color:transparent}
 .news-list{background:#fff;overflow:hidden}
 .news-list li{padding:13px 15px;border-bottom:1px solid #EEE}
 .news-list li:last-child{border-bottom:0}
@@ -286,7 +286,7 @@ font-size: 23px;
 .news-list p{font-size:1.5rem;line-height:1.5;margin:0 0 3px}
 .news-list em{font-size:1.2rem;color:#B7B7B7}
 .m-top{position:fixed;width:53px;height:53px;background:rgba(255,255,255,0.9);border:1px solid #d4d4d4;border-radius:50%;color:#666;font-size:1.2rem;text-align:center;right:15px;bottom:90px;z-index:999}
-.m-top .ico-top-arrow{width:18px;height:9px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_arrow_top.png) no-repeat;background-size:18px 9px;margin:11px auto 0}
+.m-top .ico-top-arrow{width:18px;height:9px;background:url(img/ico_arrow_top.png) no-repeat;background-size:18px 9px;margin:11px auto 0}
 .m-top p{margin:5px 0 0}
 .market-p{overflow:hidden;background:#fff}
 .market-p li{border-bottom:1px solid #ECECEC;padding:0 15px 15px;margin:15px 0 0;overflow:hidden;position:relative}
@@ -306,11 +306,11 @@ font-size: 23px;
 .car-list3 li strong{font-size:1.4rem;display:block;height:17px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:8px 0 0}
 .car-list3 li p{font-size:1.2rem;color:#dd2727;margin:5px 0 0}
 .none-block{background:#fff;min-height:400px;overflow:hidden;text-align:center}
-.none-block .ico-nocar{width:89px;height:75px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_no_car.png) no-repeat;background-size:89px 75px;margin:130px auto 11px}
+.none-block .ico-nocar{width:89px;height:75px;background:url(img/ico_no_car.png) no-repeat;background-size:89px 75px;margin:130px auto 11px}
 .none-block p{font-size:1.4rem;color:#B7B7B7;line-height:24px}
 .m-no-result{overflow:hidden;margin:10px 0}
 .m-no-result .face{width:75px;height:75px;float:left}
-.m-no-result .face-fail{background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_yixiaoche_fail.jpg) no-repeat;background-size:75px 75px}
+.m-no-result .face-fail{background:url(img/m_yixiaoche_fail.jpg) no-repeat;background-size:75px 75px}
 .m-no-result dl{float:left;padding:15px 0 0 10px}
 .m-no-result dt{font-size:1.6rem;line-height:24px}
 .m-no-result dd{font-size:1.2rem;color:#999}
@@ -329,18 +329,18 @@ font-size: 23px;
 .m-s-box .m-close-box-in{position:relative;width:100%}
 .m-s-box input[type="text"],.m-s-box input[type="search"]{width:100%;height:34px;font-size:1.5rem;color:#A0A0A0;vertical-align:middle;padding:0;box-sizing:content-box;border:0;box-shadow:0 0 0 1px #BFBFBF inset;text-indent:10px;position:relative;z-index:10;border-top-left-radius:30px;border-bottom-left-radius:30px;background-image:none}
 .m-s-box .m-btn-box{display:table-cell;width:67px;padding:9px 10px 0 0}
-.m-s-box input[type="submit"]{width:66px;height:34px;border:1px solid #BFBFBF;border-left:none;background-color:#FBFBFB;background-image:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png);background-repeat:no-repeat;background-position:22px -116px;background-size:100px auto;text-indent:-999em;cursor:pointer;vertical-align:middle;border-top-right-radius:30px;border-bottom-right-radius:30px}
-.m-s-box .m-btn-close{width:20px;height:20px;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat 2px -72px;background-size:100px auto;position:absolute;top:8px;right:5px;text-indent:-999em;z-index:11}
+.m-s-box input[type="submit"]{width:66px;height:34px;border:1px solid #BFBFBF;border-left:none;background-color:#FBFBFB;background-image:url(img/m_header_nav_search2.png);background-repeat:no-repeat;background-position:22px -116px;background-size:100px auto;text-indent:-999em;cursor:pointer;vertical-align:middle;border-top-right-radius:30px;border-bottom-right-radius:30px}
+.m-s-box .m-btn-close{width:20px;height:20px;background:url(img/m_header_nav_search2.png) no-repeat 2px -72px;background-size:100px auto;position:absolute;top:8px;right:5px;text-indent:-999em;z-index:11}
 .m-s-box-bottom{border-top:1px solid #E2E2E2;position:relative;z-index:1}
 .choose-car-tool-tt{width:100%;height:9px;text-align:center;border-bottom:1px solid #E2E2E2;font-size:1.4rem;color:#999;margin:24px 0 7px}
 .choose-car-tool-tt span{background:#fff;padding:0 20px}
 .choose-car-name-close{width:100%;height:70px;line-height:70px;font-size:1.8rem;position:relative;background:#fff}
 .choose-car-name-close .brand-name{height:70px;height:70px;float:left}
-.brand-logo-none-border{display:block;width:55px;height:55px;background:url(http://img3.bitautoimg.com/car/logo/01.png) no-repeat;float:left;margin:7px 10px 0 10px}
-.choose-car-btn-close{width:22px;height:22px;display:block;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_choose_btn_close.png) no-repeat;background-size:22px 22px;position:absolute;top:25px;right:10px;text-indent:-999em}
+.brand-logo-none-border{display:block;width:55px;height:55px;background:url(img/01.png) no-repeat;float:left;margin:7px 10px 0 10px}
+.choose-car-btn-close{width:22px;height:22px;display:block;background:url(img/m_choose_btn_close.png) no-repeat;background-size:22px 22px;position:absolute;top:25px;right:10px;text-indent:-999em}
 .sort-clear{color:#666;font-size:1.4rem;overflow:hidden;line-height:20px;margin:12px 0 0 0}
 .sort-clear a{color:#666}
-.sort-clear .btn-clear{background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_sort_ico_clear.png) no-repeat;background-size:15px 18px;float:left;padding:0 0 0 20px}
+.sort-clear .btn-clear{background:url(img/m_sort_ico_clear.png) no-repeat;background-size:15px 18px;float:left;padding:0 0 0 20px}
 .sort-clear .btn-jump{float:right}
 .m-result-page-box{padding:10px 0 0 10px}
 .choose-car-style-close{width:100%;height:80px;line-height:80px;font-size:1.8rem;position:relative}
@@ -702,7 +702,7 @@ font-size: 23px;
 .leftPopup dd.b-remove .remove i{position:absolute;width:10px;height:10px;background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:-96px -1px;top:50%;left:50%;margin-left:-5px;margin-top:-5px;display:block}
 .m-statement{font-size:1.2rem;color:#999;border-bottom:1px solid #e2e2e2;padding:10px}
 .m-tool-compare .cDiff{background:#f0f0f0}
-.bybrand_list .brand{background:url(http://image.bitautoimg.com/car/logo/01.png) no-repeat;display:inline;float:left;height:55px;margin:12px 52px 7px;overflow:hidden;padding:0;width:55px;cursor:pointer;border:1px solid #ccc}
+.bybrand_list .brand{background:url(img/01.png) no-repeat;display:inline;float:left;height:55px;margin:12px 52px 7px;overflow:hidden;padding:0;width:55px;cursor:pointer;border:1px solid #ccc}
 .bybrand_list .b{padding-bottom:10px;width:159px}
 .bybrand_list .brandname{color:#999;font-size:14px;font-weight:bold;text-align:center}
 .bybrand_list .b .highlight{font-weight:bold;font-size:14px;color:#c00;text-align:center}
