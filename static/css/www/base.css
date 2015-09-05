@@ -378,7 +378,7 @@ font-size: 23px;
 .m-focus-box .pagination-focus{position:absolute;z-index:20;right:5px;bottom:6px;text-align:right;width:100%}
 .m-focus-box .swiper-pagination-switch{display:inline-block;width:8px;height:8px;border-radius:10px;background:#9DA2A3;margin-right:5px;cursor:pointer}
 .m-focus-box .swiper-active-switch{background:#C00}
-.m-focus-box a.arrow-left,.m-focus-box a.arrow-right{display:block;width:35px;height:60px;margin:-30px 0 0;display:block;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_focus_arrow2.png) no-repeat 0 center;position:absolute;top:50%;z-index:10;-webkit-transition:all .3s ease;background-size:100px auto}
+.m-focus-box a.arrow-left,.m-focus-box a.arrow-right{display:block;width:35px;height:60px;margin:-30px 0 0;display:block;background:url(img/m_focus_arrow2.png) no-repeat 0 center;position:absolute;top:50%;z-index:10;-webkit-transition:all .3s ease;background-size:100px auto}
 .m-focus-box a.arrow-right{background-position:100% center;right:5px}
 .m-focus-box a.arrow-left{left:5px}
 .m-focus-box li a{display:block;position:relative}
@@ -396,40 +396,9 @@ font-size: 23px;
 .m-focus-box .pagination-num{color:#999;font-size:1.4rem;position:absolute;bottom:8px;right:15px}
 .m-focus-box .pagination-num em{font-size:1.6rem;color:#fff;font-weight:normal}
 .hot-news{height:43px;line-height:43px;padding:0 15px;background:#fff;overflow:hidden}
-.hot-news .news-tt{width:74px;height:28px;border-right:1px solid #F2F2F2;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/tt_hotnews.png) no-repeat left center;background-size:65px 13px;margin:7px 0 0;float:left}
 .hot-news ul{overflow:hidden}
 .hot-news ul li{height:100%;font-size:1.4rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 0 0 10px}
 .hot-news ul em{font-size:1.2rem;color:#dd2727;border:1px solid #eb7d7d;border-radius:3px;padding:1px 4px;margin-right:5px}
-.buy-top{height:92px;background:#fff;border-bottom:1px solid #ECECEC;font-size:1.2rem;margin:0 15px}
-.buy-top li{float:left;width:25%;text-align:center}
-.buy-top li a{display:block;color:#666}
-.buy-top li i{display:block;width:45px;height:45px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_index_all_new.png) no-repeat;background-size:200px auto;margin:15px auto 0}
-.buy-top li.ico-gcfw i{background-position:0 0}
-.buy-top li.ico-djmc i{background-position:-45px 0}
-.buy-top li.ico-wszx i{background-position:-90px 0}
-.buy-top li.ico-dkmc i{background-position:-135px 0}
-.buy-top li p{margin-top:2px}
-.buy-car{background:#fff;overflow:hidden;padding:0 15px 15px}
-.buy-car li{float:left;width:50%;margin:15px 0 5px}
-.buy-car li a{display:block}
-.buy-car li img{display:block;width:100%}
-.buy-car li strong{font-size:1.6rem;display:block;padding:0 5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:8px 0 5px}
-.buy-car li em{font-size:1.2rem;color:#DD2727}
-.buy-car li em.down-price{color:#390;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_ico_downprice.gif) no-repeat left center;background-size:10px 10px;padding-left:12px;margin-left:6px}
-.buy-car li:nth-child(odd) .car,.buy-car li:nth-child(odd) .btn{margin-right:15px}
-.buy-car li:nth-child(even) .car,.buy-car li:nth-child(even) .btn{margin-left:15px}
-.buy-car li .car{text-align:center}
-.buy-car li .btn a{width:98px;height:33px;line-height:33px;border:1px solid #FFAB4C;border-radius:3px;text-align:center;font-size:1.4rem;color:#f80;margin:12px auto 0}
-.car-tools{background:#fff;padding:0 15px;font-size:1.2rem}
-.car-tools ul{border-top:1px solid #F2F2F2;height:92px}
-.car-tools li{float:left;width:25%;text-align:center}
-.car-tools li a{display:block;color:#666}
-.car-tools li p{margin-top:2px}
-.car-tools li i{display:block;width:45px;height:45px;background:url(http://image.bitautoimg.com/uimg/mbt2015/images/ico_index_all_new.png) no-repeat;background-size:200px auto;margin:15px auto 0}
-.car-tools li.ico-wdyc i{background-position:0 -45px}
-.car-tools li.ico-dkjs i{background-position:-45px -45px}
-.car-tools li.ico-bxjs i{background-position:-90px -45px}
-.car-tools li.ico-ersc i{background-position:-135px -45px}
 .m-bbs-img{padding:15px 15px 0 15px;font-size:1.2rem;background:#fff}
 .m-bbs-img a{color:#fff}
 .m-bbs-img-mask{width:100%;height:25px;background:#000;opacity:.6;position:absolute;bottom:0;left:0}
@@ -491,11 +460,11 @@ font-size: 23px;
 .leftPopup li.filter b{font-weight:normal;padding:0 6px}
 .leftPopup li.filter em.alert{color:#c00;font-size:1.2rem;padding:10px 0 0;display:block}
 .leftPopup li.sub a{position:relative}
-.leftPopup li.sub a:after{display:block;position:absolute;top:21px;right:0;width:14px;height:8px;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_popup_arrow_img_gray.png) no-repeat 0 0;background-size:14px auto;content:'';font-size:0;line-height:0;color:transparent}
+.leftPopup li.sub a:after{display:block;position:absolute;top:21px;right:0;width:14px;height:8px;background:url(img/m_popup_arrow_img_gray.png) no-repeat 0 0;background-size:14px auto;content:'';font-size:0;line-height:0;color:transparent}
 .leftPopup li.sub em{color:#1663A6;font-size:1.4rem;position:absolute;right:25px;top:16px;line-height:16px}
 .leftPopup li.root{padding:0;background:#F0F0F0}
 .leftPopup li.root a{border-bottom-color:#F0F0F0;padding:0 20px;position:relative}
-.leftPopup li.root a:after{display:block;position:absolute;top:21px;right:20px;width:14px;height:8px;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_popup_arrow_img_gray.png) no-repeat 0 -42px;background-size:14px auto;content:'';font-size:0;line-height:0;color:transparent}
+.leftPopup li.root a:after{display:block;position:absolute;top:21px;right:20px;width:14px;height:8px;background:url(img/m_popup_arrow_img_gray.png) no-repeat 0 -42px;background-size:14px auto;content:'';font-size:0;line-height:0;color:transparent}
 .leftPopup li label{border-bottom:1px solid #E9E9E9}
 .leftPopup .second-list{font-size:1.4rem}
 .leftPopup .second-list li{padding-left:40px}
@@ -523,7 +492,7 @@ font-size: 23px;
 .checkbox-box span,.radio-box span{position:absolute;left:30px}
 .checkbox-box .checkbox-normal{background-position:0 0}
 .radio-box .radio-normal{background-position:-84px 0}
-.checkbox-box .checkbox-normal,.radio-box .radio-normal{width:20px;height:20px;background-image:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_inputico_part_blue_w.png);background-repeat:no-repeat;cursor:pointer;background-size:167px auto;position:absolute;top:14px;left:0}
+.checkbox-box .checkbox-normal,.radio-box .radio-normal{width:20px;height:20px;background-image:url(img/m_inputico_part_blue_w.png);background-repeat:no-repeat;cursor:pointer;background-size:167px auto;position:absolute;top:14px;left:0}
 .checkbox-box .checkbox-normal input,.radio-box .radio-normal input{margin:0;padding:0;border:0;opacity:0;cursor:pointer}
 .checkbox-box .checkbox-normal.checked{background-position:-21px 0}
 .checkbox-box .checkbox-normal.disabled{background-position:-42px 0;cursor:default}
@@ -544,76 +513,11 @@ font-size: 23px;
 .brandfilter .alert{width:70px;height:70px;border-radius:10px;background-color:#fafafa;position:fixed;left:50%;top:50%;margin-left:-35px;margin-top:-35px;display:block;border:1px solid #d3d3d3;box-sizing:border-box;text-align:center}
 .brandfilter .alert span{font-size:5rem;color:#888;line-height:70px}
 .tt-small.y2015 span{padding:0 10px}
-.pic-txt-9060.y2015 h4{font-size:1.6rem}
-.pic-txt-9060.y2015 ul li p strong{color:#b7b7b7;font-size:1.4rem}
-.pic-txt-9060.y2015 ul li.hot h4::after{content:'';width:16px;height:16px;background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:0 -16px;display:inline-block;margin-left:5px;position:relative;top:2px}
-.brandlist .pic-txt-9060 ul li p,.brandlist .pic-txt-9060 ul li h4{padding-left:18px;line-height:20px;padding:0 0 0 8px}
-.brandlist .pic-txt-9060 ul li.blue h4{color:#006bad;padding-left:0}
-.brandlist .pic-txt-9060 ul li.blue h4:before{content:'';background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:-1px -1px;width:13px;height:10px;display:inline-block;margin-right:5px}
 .none-block{background:#fff none repeat scroll 0 0;min-height:300px;overflow:hidden;position:relative}
 .none-block p{position:absolute;color:#999;font-size:1.5rem;line-height:24px;top:50%;margin-top:-24px;text-align:center;width:100%}
 .brandimg_list img{width:90px;height:60px;float:left;margin-right:10px}
 .brandimg_list{padding:15px 15px 5px 15px;box-sizing:border-box;height:auto}
 .brandimg_list .brand-name{position:relative;top:-5px}
-.m-tool-compare.y2015{background:#fff}
-.m-tool-compare.y2015 .flex{z-index:100;width:100%}
-.m-tool-compare.y2015 .flex .section-tt{position:relative;overflow:hidden;height:25px;border-bottom:1px solid #E2E2E2}
-.m-tool-compare.y2015 .flex .section-tt table{position:absolute;top:0;left:0}
-.m-tool-compare.y2015 .flex .section-tt table h3{position:initial}
-.m-tool-compare.y2015 .bgW{overflow:initial}
-.m-tool-compare.y2015 .section-flex{display:table;width:100%;background-color:#fff;padding-bottom:12px}
-.m-tool-compare.y2015 .section-flex .flex-left{display:table-cell;width:120px}
-.m-tool-compare.y2015 .section-flex .flex-right{display:table-cell;position:relative;overflow:hidden}
-.m-tool-compare.y2015 .section-flex .flex-right table{margin:12px 10px 0}
-.m-tool-compare.y2015 .section-flex .flex-right .flex-right-box{position:absolute;top:0;left:-8px}
-.m-tool-compare.y2015 .section-flex .flex-right .flex-right-box .car-item-gray{border:1px solid #297dcc;border-radius:5px;padding:7px 5px;box-sizing:border-box;background:#fff;width:126px}
-.m-tool-compare.y2015 .section-flex .flex-right .flex-right-box .car-item-gray h4{color:#333;font-size:1.2rem}
-.m-tool-compare.y2015 .section-flex .flex-right .flex-right-box .car-item-gray em{color:#dd2727;margin-top:2px;display:block}
-.m-tool-compare.y2015 .section-flex .flex-right .flex-right-box .car-item-gray i{position:absolute;bottom:2px;right:3px;background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:-16px -3px;width:8px;height:8px;border:0}
-.m-tool-compare.y2015 .section-flex tr td{width:132px}
-.m-tool-compare.y2015 .section-tt table{margin:0}
-.m-tool-compare.y2015 .section-tt table td h3{margin:0}
-.m-tool-compare.y2015 .section-tx{display:table;width:100%}
-.m-tool-compare.y2015 .section-tx .tit{display:table-cell;width:119px}
-.m-tool-compare.y2015 .section-tx .tit .tit-box{width:119px;border-right:1px solid #E2E2E2}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table{margin:0}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr{height:38px;overflow:hidden}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr.phone-title{height:25px}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr.phone-title td{position:relative}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr.phone-title h3{position:absolute;width:6000px;height:25px;top:0;left:0}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr.h2{height:70px}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr.h2 span{line-height:70px}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr td{width:138px}
-.m-tool-compare.y2015 .section-tx .tit .tit-box table tr td h3{margin:0}
-.m-tool-compare.y2015 tbody th,.m-tool-compare tbody td{position:relative;width:119px;overflow:hidden}
-.m-tool-compare.y2015 tbody th span{font-size:1.2rem;white-space:nowrap;position:absolute;top:0;left:0;height:38px;line-height:38px;padding:0 5px 0 10px}
-.m-tool-compare.y2015 .section-tx .cont{display:table-cell;position:relative;overflow:hidden}
-.m-tool-compare.y2015 .section-tx .cont .cont-box{position:absolute;top:0;left:0;width:auto}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table{margin:0 10px 0 0}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr{height:38px;overflow:hidden}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr.h25{height:25px}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr td{width:120px;padding:0 5px;position:relative}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr td .c-box{width:119px;display:block}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr td .txt{height:37px;line-height:37px;overflow:hidden}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr.h2{height:70px}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table tr.h2 .txt{height:69px}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .cGray{color:#666}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .m-ico-calculator{background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:-18px -16px;width:12px;height:15px}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .low-price{font-size:1.2rem;color:#297dcc;border:1px solid #297dcc;display:inline-block;line-height:15px;text-align:center;padding:1px 3px;margin-left:10px}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .m-btn-xunjia{border:1px solid #ffab4c;color:#ffab4c;background-color:#fff}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box{list-style:none;padding:0 3px 0 0}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .center{text-align:center}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li{float:left;padding:1px;box-sizing:border-box;border:1px solid #d4d4d4;display:block;margin-left:3px;margin-top:5px}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a{width:12px;height:12px;display:block}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-d1c0a5{background-color:#d1c0a5}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-7abd9e{background-color:#7abd9e}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-d1d2d4{background-color:#d1d2d4}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-b95668{background-color:#b95668}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-e59a7d{background-color:#e59a7d}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-7e9ec8{background-color:#7e9ec8}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-a5654c{background-color:#a5654c}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-ffffff{background-color:#fff}
-.m-tool-compare.y2015 .section-tx .cont .cont-box table .color-box li a.c-263940{background-color:#263940}
 .flex-append{width:100%;height:130px;display:none}
 .nonebar{display:none}
 .m-top{top:auto;margin:0;bottom:30px}
@@ -641,16 +545,6 @@ font-size: 23px;
 .swipeLeft-header a.btn-clear::before{content:'';background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-size:250px auto;background-repeat:no-repeat;background-position:-46px -14px;width:13px;height:17px;display:inline-block;vertical-align:-3px;margin-right:2px}
 .swipeLeft-header a.btn-clear.disable::before{background-position:-32px -14px}
 .swipeLeft{background-color:#f7f7f7}
-.y2015-car-01{position:relative}
-.y2015-car-01 .first-list li{border-bottom:1px solid #E9E9E9;margin:0 10px;height:auto;line-height:normal;padding:0}
-.y2015-car-01 .first-list li .line-box{padding:10px 0 10px 0;display:table;width:100%;box-sizing:border-box}
-.y2015-car-01 .first-list li.add .line-box a:last-child{width:100%;color:#333;display:block}
-.y2015-car-01 .first-list li.add .line-box a:before{content:'';background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:-108px -1px;width:12px;height:12px;display:inline-block;margin-right:7px}
-.y2015-car-01 .first-list li a{position:relative;line-height:25px;border:0;display:table-cell}
-.y2015-car-01 .first-list li a:last-child{width:40px;position:relative}
-.y2015-car-01 .first-list li a::after{background:none!important}
-.y2015-car-01 .first-list li .btn-close i{position:absolute;background-image:url(http://image.bitautoimg.com/uimg/mbt2015/images/duibi-public.png);background-repeat:no-repeat;background-size:250px auto;background-position:-96px -1px;width:10px;height:10px;left:50%;top:50%;margin-left:-5px;margin-top:-5px}
-.y2015-car-01 .first-list li.alert{font-size:1.4rem;color:#8c8c8c;line-height:20px;border-bottom:0;padding:5px 0}
 .leftPopup .swipeLeft{position:relative}
 .leftPopup .swipeLeft .loading{width:250px;height:80px;position:absolute;top:50%;margin-top:-40px}
 .leftPopup .swipeLeft .loading img{width:31px;height:31px;display:block;margin:0 auto}
@@ -1005,7 +899,7 @@ body{background-color:#fff}
 .btn_call{width: 217px; height: 37px; left: 33.75px; top: 174.5px; font-size: 19px; border-radius: 6px; border-width: 1px; border-style: solid; text-align: center; font-weight: normal; font-style: normal; background-color: rgb(43, 175, 43); color: rgb(255, 255, 255); border-color: rgb(10, 143, 8); box-shadow: 0px 0px 0px rgb(170, 170, 170); transform: rotate(0deg); opacity: 1; z-index: 5; margin:0 auto;}
 .btn_call p{line-height: 36px}
 .call_remark{ text-align:left; line-height:20px; margin:20px 12px;}
-div.text{ margin-bottom: 12px; }
+div.text{ margin-bottom: 12px; text-align: left}
 input.text{
     padding: 2px 5px;
     background: #fff ;
