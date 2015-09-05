@@ -951,7 +951,7 @@ body{background-color:#fff}
 .sort-clear{color:#666;font-size:1.4rem;overflow:hidden;line-height:20px;padding:12px 0 12px 0;background-color:#fff}
 .sort-clear{margin:0}
 .bg-fff{background-color:#f7f7f7!important; line-height: 22px; font-size: 14px;}
-.wrap{background-color:#f7f7f7; text-align:center; width: 360px; margin: 0 auto; text-align: left;}
+.wrap{background-color:#f7f7f7; text-align:center; width: 360px; margin: 0 auto;}
 .sort-car{font-size:1.2rem}
 .sort-car li a{height:58px;line-height:20px}
 .sort-car li a span{width:75px;height:25px;display:block;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_all_car.png) no-repeat;background-size:225px auto;margin:8px auto 0}
