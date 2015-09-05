@@ -1,4 +1,4 @@
-<include file="public:header" />
+<include file="public:header" xmlns="http://www.w3.org/1999/html"/>
 <body class="bg-fff">
 <!-- 公用头 -->
 <include file="public:nav" />
@@ -7,20 +7,56 @@
 <!-- 按变速箱 start -->
 
 <div class="wrap wrap-b10">
-    <h2 class="btn-one btn-gray"><i style="font-size:25px;" class="fa fa-qrcode"></i> 车名片</h2>
+    <h2 class="btn-one btn-gray"> 车名片</h2>
+    <div class="btn_call call_dialog">
+        <p style="cursor: pointer"><i style="font-size: 20px; display: inline-block;" class="fa fa-phone"></i> <span class="text">匿名呼叫车主</span></p>
+     </div>
 
-    <div class="card_remark">扫描下二维码就能致电您，挪车，剐蹭，及时处理。<br />
-        匿名通话，不泄露双方电话号码</div>
+    <div class="call_remark">
+        1. 您和车主都看不到对方电话<br/>
+        2. 此通话只收取市话费<br/>
+        3. 请勿骚扰车主，否则会被平台屏蔽
+    </div>
+
     <div class="card_block">
-        <div class="erweima"><img src="/qrcode.php?id={$call_number['id'}&r={$call_number['rand_card_num']}" /></div>
-        <div class="remark"><em>扫码一键呼叫车主</em></div>
-        <div>
-            或致电 400-110-12345<br />
-            转分机 {$call_number['id']} 直通车主
+        <div class="remak" style="margin-bottom: 10px;"><i style="font-size:20px;" class="fa fa-qrcode"></i> <span style="font-size: 20px;">车名片</span></div>
+        <div class="remak" >
+            挪车，剐蹭，及时处理，<br />
+            匿名通话，保护隐私<br />
+        </div>
+
+        <div class="remark">
+            <a href="/register" style="color: #000088; text-decoration: underline">点击这里免费领取</a>
         </div>
 
     </div>
-    <div class="card_remark">请在车内，将此面面向玻璃</div>
 </div>
+
+<div class="call_dialog_block ">
+    <div class="close_dialog">X</div>
+    <div class="stitle" style="text-align: center">
+    <i style="font-size:18px;" class="fa fa-info-circle"></i> 若系统没有自动转接，请手动加拨分机号
+           </div>
+    <div class="remark" style="text-align: center; margin-bottom: 12px;">
+    {$call_number['id']}
+    </div>
+    <div class="btn_call" style="margin-bottom: 14px;">
+        <a href="tel:{$mobile_400},,{$call_number['id']}" mce_href="tel:{$mobile_400},,{$call_number['id']}" style="color: #fff; text-decoration: none"><p style="cursor: pointer"><i style="font-size: 20px; display: inline-block;" class="fa fa-phone"></i> <span class="text">现在拨打</span></p></a>
+    </div>
+    <div class="cls"></div>
+</div>
+<div class="call_dialog_block_bg"></div>
+
+<script type="text/javascript">
+    $('.call_dialog').click(function(){
+        $('.call_dialog_block_bg').show();
+        $('.call_dialog_block').show();
+    });
+
+    $('.close_dialog').click(function(){
+        $('.call_dialog_block').hide();
+        $('.call_dialog_block_bg').hide();
+    });
+</script>
 <!-- 公用底 -->
 <include file="public:footer" />

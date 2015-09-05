@@ -10,6 +10,8 @@ class frontendAction extends baseAction {
     
     public function _initialize() {
         parent::_initialize();
+
+
         //网站状态
         if (!C('pin_site_status')) {
             header('Content-Type:text/html; charset=utf-8');
@@ -18,6 +20,7 @@ class frontendAction extends baseAction {
         //初始化访问者
         $this->_init_visitor();
 
+        $this->assign('mobile_400', '400-110-123456');
         //网站导航选中
         $this->assign('nav_curr', '');
     }

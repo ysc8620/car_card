@@ -868,19 +868,6 @@ body{background-color:#fff}
 .ad-txt-line{width:100%;height:45px;line-height:45px;background:#fbfbfb}
 .ad-txt-line em{font-size:1.2rem;color:#3369B1;height:14px;line-height:14px;border:1px solid #3369B1;border-radius:2px;padding:1px 4px;display:inline-block;margin:0 8px 0 15px;vertical-align:1px}
 .ad-txt-line a{display:inline-block;font-size:1.4rem;color:#666}
-.m-fixed-app-mask{width:100%;height:50px;position:fixed;left:0;bottom:0;background:#000;opacity:.75;z-index:88}
-.m-fixed-app-download{width:100%;height:50px;line-height:50px;font-size:1.6rem;position:fixed;left:0;bottom:0;z-index:89}
-.m-fixed-app-download .m-fixed-btn-close{width:25px;height:30px;background:url(http://image.bitautoimg.com/uimg/mbt/images/m_ico_fixed_app_close.png) no-repeat center center;background-size:22px 22px;float:left;text-indent:-9999em;margin:14px 0 0 5px}
-.m-fixed-app-download a{float:left;height:50px;color:#FFF}
-.m-fixed-app-download a img{width:32px;height:32px;margin:0 7px 0 6px;vertical-align:middle}
-.m-fixed-app-download a.style1{background:url(http://image.bitautoimg.com/uimg/mbt/images/m_ico_fixed_app_download.png) no-repeat right center;background-size:21px 19px;padding-right:25px}
-.m-fixed-app-download .m-fixed-btn-close{margin:10px 0 0 5px;background-size:20px 20px}
-.m-fixed-app-download a.style2 img{float:left;margin:10px 0 0 10px}
-.m-fixed-app-download a.style2 dl{float:left;color:#FFF;line-height:18px;margin:8px 0 0 10px}
-.m-fixed-app-download a.style2 dt{font-size:1.5rem}
-.m-fixed-app-download a.style2 dd{font-size:1.2rem}
-.m-fixed-app-download a.style2-btn{float:left;width:auto;height:25px;background:#EDEDED;background:-webkit-gradient(linear,left top,left bottom,from(#FFF),to(#DBDBDB));background:-moz-linear-gradient(top,#FFF,#DBDBDB);background:-ms-linear-gradient(top,#FFF,#DBDBDB);color:#666;font-size:1.2rem;line-height:25px;border-radius:2px;padding:0 10px;margin:14px 0 0 20px}
-.m-fixed-app-download a.style2-btn span{background:url(http://image.bitautoimg.com/uimg/mbt/images/m_fixed_ico_download.png) no-repeat right center;background-size:13px 13px;padding-right:17px}
 .gg-top{height:58px;background:#ECECEC;border-top:1px solid #ccc;border-bottom:1px solid #ccc;overflow:hidden}
 .gg-top img{width:40px;height:40px;float:left;margin:9px 0 0 10px}
 .gg-top dl{float:left;margin:10px 0 0 10px;line-height:20px}
@@ -898,7 +885,7 @@ body{background-color:#fff}
 .card_block div em{ font-size:20px; font-weight:bold; }
 .btn_call{width: 217px; height: 37px; left: 33.75px; top: 174.5px; font-size: 19px; border-radius: 6px; border-width: 1px; border-style: solid; text-align: center; font-weight: normal; font-style: normal; background-color: rgb(43, 175, 43); color: rgb(255, 255, 255); border-color: rgb(10, 143, 8); box-shadow: 0px 0px 0px rgb(170, 170, 170); transform: rotate(0deg); opacity: 1; z-index: 5; margin:0 auto;}
 .btn_call p{line-height: 36px}
-.call_remark{ text-align:left; line-height:20px; margin:20px 12px;}
+.call_remark{ text-align:left; line-height:20px; margin:20px 12px 12px 70px;}
 div.text{ margin-bottom: 12px; text-align: left}
 input.text{
     padding: 2px 5px;
@@ -910,3 +897,21 @@ input.text{
 }
 input.btn{ border: 1px #ddd solid; border-radius: 4px; padding: 5px;cursor: pointer; }
 input.btn:hover{ background: #e3e3e3; border: 1px #ccc solid;}
+
+.cls{ clear: both;}
+.call_dialog_block_bg{ width: 100%; height: 100%; opacity: 0.3; background: #000; position: fixed; display: table-cell; z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);}
+.call_dialog_block{ width: 100%; display: none;  border:#ddd 1px solid; background:#fff; position: fixed; bottom:0px; z-index: 1000; line-height: 20px;}
+.call_dialog_block .stitle{ padding: 6px;}
+
+.close_dialog{ float: right; font-size: 16px; cursor: pointer; padding: 4px;}
