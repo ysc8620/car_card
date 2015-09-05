@@ -104,15 +104,26 @@ function firstget()
         	<Redirect>connectfail</Redirect>
         </Response>";
     }
-elseif($digits=="3002"){
-		 echo "<?xml version='1.0' encoding='UTF-8'?>
+else{
+    $conn = mysql_connect('localhost', 'root', 'ntucdbs911') or die('error');
+    mysql_fetch_assoc('card') or die('error');
+    mysql_query('SET NAMES utf8');
+    $digits = intval($digits);
+    $res = mysql_query("SELECT u.mobile FROM c_call_number c,c_user_info u WHERE c.id='{$digits}' AND u.id = c.info_id  LIMIT 1");
+    $row = mysql_fetch_assoc($res);
+
+    mysql_close($conn);
+
+if($row['mobile']){
+    $number = $row['mobile'];
+        echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-	}
-else{
+    }else{
+
     	//用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
@@ -123,6 +134,7 @@ else{
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
+}
      
 }
 
