@@ -3,9 +3,11 @@ class cardAction extends frontendAction {
     
     public function index() {
         $id = intval( $this->_param('id') );
-        $r = intval( $this->_param('r') );
+        $r = strval( $this->_param('r') );
         if($id){
             $call_number = M('call_number')->find($id);
+
+
             $this->assign('call_number', $call_number);
             if($call_number['rand_card_num'] != $r){
                 return $this->redirect('/');

@@ -950,8 +950,8 @@ body{background-color:#fff}
 .sort-pop li i{width:0;height:0;border-width:4px 4px;border-style:solid;border-color:transparent #d2d2d2 #d2d2d2 transparent;position:absolute;bottom:3px;right:3px;z-index:2}
 .sort-clear{color:#666;font-size:1.4rem;overflow:hidden;line-height:20px;padding:12px 0 12px 0;background-color:#fff}
 .sort-clear{margin:0}
-.bg-fff{background-color:#fff!important}
-.wrap{background-color:#f7f7f7; text-align:center;}
+.bg-fff{background-color:#f7f7f7!important; line-height: 22px; font-size: 14px;}
+.wrap{background-color:#f7f7f7; text-align:center; width: 360px; margin: 0 auto; text-align: left;}
 .sort-car{font-size:1.2rem}
 .sort-car li a{height:58px;line-height:20px}
 .sort-car li a span{width:75px;height:25px;display:block;background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_all_car.png) no-repeat;background-size:225px auto;margin:8px auto 0}
@@ -996,8 +996,8 @@ body{background-color:#fff}
 .gg-top .gg-btn-download{width:68px;height:23px;line-height:23px;background:#ECECEC;border:1px solid #0069C9;color:#0069C9;text-align:center;border-radius:3px;float:right;font-size:1.2rem;margin:17px 20px 0 0}
 
 /*新加部分*/
-.card_remark{ margin:6px; font-size:14px; clear:both; text-align:left; line-height:18px;}
-.card_msg_remark{ margin:6px; font-size:14px; clear:both; text-align:center; line-height:18px;}
+.card_remark{ font-size:14px; clear:both; text-align:left; line-height:18px;}
+.card_msg_remark{ font-size:14px; clear:both; text-align:center; line-height:18px;}
 .card_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:20px; text-align:center; background:#fff; margin:6px auto;}
 .card_block div{ font-size:14px; line-height:20px;}
 .card_block div.remark{ margin-top:14px; margin-bottom:14px;}
@@ -1005,3 +1005,14 @@ body{background-color:#fff}
 .btn_call{width: 217px; height: 37px; left: 33.75px; top: 174.5px; font-size: 19px; border-radius: 6px; border-width: 1px; border-style: solid; text-align: center; font-weight: normal; font-style: normal; background-color: rgb(43, 175, 43); color: rgb(255, 255, 255); border-color: rgb(10, 143, 8); box-shadow: 0px 0px 0px rgb(170, 170, 170); transform: rotate(0deg); opacity: 1; z-index: 5; margin:0 auto;}
 .btn_call p{line-height: 36px}
 .call_remark{ text-align:left; line-height:20px; margin:20px 12px;}
+div.text{ margin-bottom: 12px; }
+input.text{
+    padding: 2px 5px;
+    background: #fff ;
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    height: 28px;
+    width: 120px;
+}
+input.btn{ border: 1px #ddd solid; border-radius: 4px; padding: 5px;cursor: pointer; }
+input.btn:hover{ background: #e3e3e3; border: 1px #ccc solid;}
