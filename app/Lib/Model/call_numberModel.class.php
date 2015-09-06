@@ -1,6 +1,6 @@
 <?php
 
-class user_infoModel extends Model
+class call_numberModel extends Model
 {
 
     protected $_validate = array(

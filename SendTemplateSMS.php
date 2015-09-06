@@ -52,22 +52,25 @@ function sendTemplateSMS($to,$datas,$tempId)
      $rest->setAppId($appId);
     
      // 发送模板短信
-     echo "Sending TemplateSMS to $to <br/>";
+     #echo "Sending TemplateSMS to $to <br/>";
      $result = $rest->sendTemplateSMS($to,$datas,$tempId);
      if($result == NULL ) {
-         echo "result error!";
-         break;
+         #echo "result error!";
+         #break;
+         return 200;
      }
      if($result->statusCode!=0) {
-         echo "error code :" . $result->statusCode . "<br>";
-         echo "error msg :" . $result->statusMsg . "<br>";
-         //TODO 添加错误处理逻辑
+         return 200;
+//         echo "error code :" . $result->statusCode . "<br>";
+//         echo "error msg :" . $result->statusMsg . "<br>";
+//         //TODO 添加错误处理逻辑
      }else{
-         echo "Sendind TemplateSMS success!<br/>";
-         // 获取返回信息
-         $smsmessage = $result->TemplateSMS;
-         echo "dateCreated:".$smsmessage->dateCreated."<br/>";
-         echo "smsMessageSid:".$smsmessage->smsMessageSid."<br/>";
+         return 100;
+//         echo "Sendind TemplateSMS success!<br/>";
+//         // 获取返回信息
+//         $smsmessage = $result->TemplateSMS;
+//         echo "dateCreated:".$smsmessage->dateCreated."<br/>";
+//         echo "smsMessageSid:".$smsmessage->smsMessageSid."<br/>";
          //TODO 添加成功处理逻辑
      }
 }
@@ -78,6 +81,6 @@ function sendTemplateSMS($to,$datas,$tempId)
 		//*result = sendTemplateSMS("13800000000" ,array('6532','5'),"1");																		  *
 		//*则13800000000手机号收到的短信内容是：【云通讯】您使用的是云通讯短信模板，您的验证码是6532，请于5分钟内正确输入     *
 		//*********************************************************************************************************************
-sendTemplateSMS("15818547788",array('10086','5'),"1");//手机号码，替换内容数组，模板ID
+# sendTemplateSMS("15818547788",array('10086','5'),"1");//手机号码，替换内容数组，模板ID
 ?>
 

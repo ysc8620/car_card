@@ -279,4 +279,18 @@ class String {
 			return $string;
 		}
 	}
+
+    static function getPwd($password, $salt=''){
+        return md5( md5($password .'~!@#)(*'. $salt) );
+    }
+
+    //mobile
+    static function isMobile($val){
+        if(!$val){
+            return false;
+        }
+
+        //return $val;
+        return preg_match("/^(13[0-9]|145|147|15[0-3]|15[5-9]|180|182|18[5-9]|17[6-8])[0-9]{8}$/i",$val)? true : false;
+    }
 }

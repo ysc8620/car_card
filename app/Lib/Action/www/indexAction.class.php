@@ -3,7 +3,9 @@ class indexAction extends frontendAction {
     
     public function index() {
 
-
+        if($_SESSION['user_id']){
+            return header("Location: /user");
+        }
         $this->display();
     }
 

@@ -7,6 +7,8 @@ if (!is_file('./data/install.lock')) {
 define('PIN_VERSION', '3.0');
 /* 当前车名片程序Release */
 define('PIN_RELEASE', '20121127');
+
+define('ROOT_PATH', dirname(__FILE__).'/');
 /* 应用名称*/
 define('APP_NAME', 'app');
 /* 应用目录*/
