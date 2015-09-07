@@ -2,7 +2,13 @@
 //url示例:http://localhost/?startservice&appid=qw 
 //被咨询的号码，应用未上线需要先在控制台-测试号码里进行绑定后才能呼叫，否则提示呼叫受限
 $number='18668112791';
+function logss($log){
+    $fp = fopen("./log.log",'a+');
+    fwrite($fp, $log."\r\n");
+    fclose($fp);
+}
 
+logss($_SERVER['REQUEST_URI']."=".date("Y-m-d H:i:s=").http_build_query($_REQUEST));
 $ref=$_SERVER['REQUEST_URI'] ;            //云通讯回调请求页面的URI 
 if(strpos($ref,'startservice')){        //云通讯IVR启动业务的回调请求，请求的url中固定相对地址startservice
     startservice();
