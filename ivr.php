@@ -124,7 +124,9 @@ else{
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-    }else{
+    }
+    /*
+    else{
     	//用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
@@ -134,7 +136,7 @@ else{
         	<Play>timeout.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
-    }
+    }*/
 }
      
 }
