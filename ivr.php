@@ -99,7 +99,7 @@ function firstget()
         	<Redirect>connectfail</Redirect>
         </Response>";
     }
-    elseif($digits=="300002"){
+    elseif($digits=="300006"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -111,7 +111,7 @@ function firstget()
         //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
-        	<Get action='firstget' numdigits='1' timeout='30'>
+        	<Get action='firstget' numdigits='6' timeout='30'>
         		<Play>main.wav</Play>
         	</Get>
         	<Play>timeout.wav</Play>
