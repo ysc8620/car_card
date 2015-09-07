@@ -82,7 +82,7 @@ function firstget()
         	<Play>muzic.wav</Play>
         	<Hangup/>
         </Response>";
-    }/* else if($digits=="2"){
+    }else if($digits=="2"){
         //用户按2键后响应的咨询呼叫命令，在呼叫被叫的同时进行放音，被叫超时没有接听调整到副命令connectfail进行回调
         //命令中action='dtmfreport'为自定义按键回调相对地址
         //number='$number'为呼叫的咨询侧的号码，可以是手机、固话或者云通讯平台的voip号
@@ -98,7 +98,7 @@ function firstget()
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-    }*/
+    }
     elseif($digits=="300002"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
