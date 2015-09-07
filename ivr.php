@@ -78,6 +78,8 @@ function firstget()
     $appid = $_REQUEST['appid'];        //应用id
     $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
     $digits = $_REQUEST['digits'];    //用户按键内容
+
+    logss($digits."=======");
     //对云通讯平台回调请求的响应包体
     if ($digits=="01"){
         //用户按1键后响应的播放语音，语音播放完成后挂机
