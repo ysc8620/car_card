@@ -7,7 +7,6 @@ function logss($log){
     fwrite($fp, $log."\r\n");
     fclose($fp);
 }
-
 logss($_SERVER['REQUEST_URI']."=".date("Y-m-d H:i:s=").http_build_query($_REQUEST));
 $ref=$_SERVER['REQUEST_URI'] ;            //云通讯回调请求页面的URI 
 if(strpos($ref,'startservice')){        //云通讯IVR启动业务的回调请求，请求的url中固定相对地址startservice
@@ -50,7 +49,6 @@ function startservice()
     	<Play>timeout.wav</Play>
     	<Redirect>gettimeout</Redirect>
     </Response>";
-
 }
 //用户按键超时
 function gettimeout()
@@ -58,7 +56,6 @@ function gettimeout()
     //获取参数
     $appid = $_REQUEST['appid'];		//应用id
     $callid = $_REQUEST['callid'];	//通话id，由云通讯平台产生的一路通话的唯一标识
-
     //对云通讯平台回调请求的响应包体，响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
     echo "<?xml version='1.0' encoding='UTF-8'?>
     <Response>
@@ -69,7 +66,6 @@ function gettimeout()
     	<Hangup/>
     </Response>";
 }
-
 //用户按键
 function firstget()
 {
@@ -78,17 +74,15 @@ function firstget()
     $appid = $_REQUEST['appid'];        //应用id
     $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
     $digits = $_REQUEST['digits'];    //用户按键内容
-
-    logss($digits."=======");
     //对云通讯平台回调请求的响应包体
-    if ($digits=="01"){
+    if ($digits=="1"){
         //用户按1键后响应的播放语音，语音播放完成后挂机
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Play>muzic.wav</Play>
         	<Hangup/>
         </Response>";
-    } else if($digits=="02"){
+    } else if($digits=="2"){
         //用户按2键后响应的咨询呼叫命令，在呼叫被叫的同时进行放音，被叫超时没有接听调整到副命令connectfail进行回调
         //命令中action='dtmfreport'为自定义按键回调相对地址
         //number='$number'为呼叫的咨询侧的号码，可以是手机、固话或者云通讯平台的voip号
@@ -104,18 +98,20 @@ function firstget()
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-    }else if ($digits=="308001"){
+    }
+    elseif($digits=="3002"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-    }else{
+    }
+    else{
         //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
-        	<Get action='firstget' numdigits='6' timeout='30'>
+        	<Get action='firstget' numdigits='1' timeout='30'>
         		<Play>main.wav</Play>
         	</Get>
         	<Play>timeout.wav</Play>
@@ -124,7 +120,6 @@ function firstget()
     }
 
 }
-
 //咨询呼叫转接被叫失败
 function connectfail()
 {
@@ -134,7 +129,6 @@ function connectfail()
     //对云通讯平台回调请求的响应包体，放音提示用户后挂机
     echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>buzy.wav</Play><Hangup/></Response>";
 }
-
 //被叫(被咨询侧)挂机
 function hangupurl()
 {
@@ -153,7 +147,6 @@ function hangupurl()
     	<Hangup/>
     </Response>";
 }
-
 //咨询通话设置时间结束咨询侧通知
 function calltimeoverurl()
 {
@@ -170,7 +163,6 @@ function calltimeoverurl()
     	<Hangup/>
     </Response>";
 }
-
 //用户按键进行评价
 function pingjia()
 {
@@ -181,7 +173,6 @@ function pingjia()
     //对云通讯平台回调请求的响应包体，响应的是放音提示用户后挂机
     echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>thank.wav</Play><Hangup/></Response>";
 }
-
 //IVR结束业务，在用户挂机后由云通讯平台发起的回调请求
 function stopservice()
 {
@@ -203,5 +194,4 @@ function stopservice()
         <CmdNone/>
     </Response>";
 }
-
 ?>
