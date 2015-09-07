@@ -1,7 +1,7 @@
 <?php        
 //url示例:http://localhost/?startservice&appid=qw 
 //被咨询的号码，应用未上线需要先在控制台-测试号码里进行绑定后才能呼叫，否则提示呼叫受限
-$number='15818547788';
+$number='18668112791';
 
 $db = require_once("./data/config/db.php");
 
@@ -125,25 +125,16 @@ else{
         	<Redirect>connectfail</Redirect>
         </Response>";
     }else{
-        echo "<?xml version='1.0' encoding='UTF-8'?>
-        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
-        	</ConsultationCall>
-        	<Redirect>connectfail</Redirect>
-        </Response>";
-    }
-    /*
-    else{
     	//用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
-        	<Get action='firstget' numdigits='1' timeout='30'>
+        	<Get action='firstget' numdigits='1' timeout='60'>
         		<Play>main.wav</Play>
         	</Get>
         	<Play>timeout.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
-    }*/
+    }
 }
      
 }
