@@ -124,6 +124,13 @@ else{
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
+    }else{
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
     }
     /*
     else{
