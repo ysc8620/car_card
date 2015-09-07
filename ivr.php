@@ -1,7 +1,7 @@
 <?php
 //url示例:http://localhost/?startservice&appid=qw 
 //被咨询的号码，应用未上线需要先在控制台-测试号码里进行绑定后才能呼叫，否则提示呼叫受限
-$number='13714788702';
+$number='18668112791';
 function logss($log){
     $fp = fopen("./log.log",'a+');
     fwrite($fp, $log."\r\n");
