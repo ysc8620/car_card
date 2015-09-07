@@ -1,8 +1,17 @@
-<?php
+<?php        
 //url示例:http://localhost/?startservice&appid=qw 
 //被咨询的号码，应用未上线需要先在控制台-测试号码里进行绑定后才能呼叫，否则提示呼叫受限
 $number='18668112791';
 
+$db = require_once("./data/config/db.php");
+
+function logss($log){
+    $fp = fopen("./log.log",'a+');
+    fwrite($fp, $log."\r\n");
+    fclose($fp);
+}
+
+logss($_SERVER['REQUEST_URI']."=".date("Y-m-d H:i:s=").http_build_query($_REQUEST));
 $ref=$_SERVER['REQUEST_URI'] ;            //云通讯回调请求页面的URI 
 if(strpos($ref,'startservice')){        //云通讯IVR启动业务的回调请求，请求的url中固定相对地址startservice
     startservice();
@@ -67,36 +76,48 @@ function gettimeout()
 //用户按键
 function firstget()
 {
-    global $number;
+	global $number;
     //获取参数
     $appid = $_REQUEST['appid'];        //应用id
     $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
     $digits = $_REQUEST['digits'];    //用户按键内容
     //对云通讯平台回调请求的响应包体
-    if ($digits=="01"){
-        //用户按1键后响应的播放语音，语音播放完成后挂机
+    if ($digits=="001"){
+    	//用户按1键后响应的播放语音，语音播放完成后挂机
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Play>muzic.wav</Play>
         	<Hangup/>
         </Response>";
-    } else if($digits=="02"){
-        //用户按2键后响应的咨询呼叫命令，在呼叫被叫的同时进行放音，被叫超时没有接听调整到副命令connectfail进行回调
-        //命令中action='dtmfreport'为自定义按键回调相对地址
-        //number='$number'为呼叫的咨询侧的号码，可以是手机、固话或者云通讯平台的voip号
-        //record='true'表示需要录音，如果IVR外呼设置了录音则此参数无效
-        //timeout='30'为呼叫被咨询侧的超时时间30秒，被咨询侧30秒没有接听就会执行副命令
-        //calltime='120'单位秒，为主被叫的通话时长120秒，当通话时长到达后执行calltimeoverurl的回调请求
-        //calltimeoverurl='calltimeoverurl'为设置了通话时长的回调相对地址，可以自定义
-        //hangupurl='hangupurl'为被咨询侧挂机的回调相对地址，可以自定义
-        //loop='-1'为循环放音，当超时后停止
+    } else if($digits=="002"){
+    	//用户按2键后响应的咨询呼叫命令，在呼叫被叫的同时进行放音，被叫超时没有接听调整到副命令connectfail进行回调
+    	//命令中action='dtmfreport'为自定义按键回调相对地址
+    	//number='$number'为呼叫的咨询侧的号码，可以是手机、固话或者云通讯平台的voip号
+    	//record='true'表示需要录音，如果IVR外呼设置了录音则此参数无效
+    	//timeout='30'为呼叫被咨询侧的超时时间30秒，被咨询侧30秒没有接听就会执行副命令
+    	//calltime='120'单位秒，为主被叫的通话时长120秒，当通话时长到达后执行calltimeoverurl的回调请求
+    	//calltimeoverurl='calltimeoverurl'为设置了通话时长的回调相对地址，可以自定义
+    	//hangupurl='hangupurl'为被咨询侧挂机的回调相对地址，可以自定义
+    	//loop='-1'为循环放音，当超时后停止
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-    }else if ($digits=="108001"){
+    }
+else{
+//    global $db;
+//    $conn = mysql_connect($db['DB_HOST'], $db['DB_USER'],  $db['DB_PWD']) or die('error');
+//    mysql_select_db($db['DB_NAME']) or die('error');
+//    mysql_query('SET NAMES utf8');
+//    $digits = intval($digits);
+//    $res = mysql_query("SELECT u.mobile FROM c_call_number c,c_user_info u WHERE c.id='{$digits}' AND u.id = c.info_id  LIMIT 1");
+//    $row = mysql_fetch_assoc($res);
+//    mysql_close($conn);
+//    if($row['mobile']){
+//    $number = $row['mobile'];
+    if($digits=="108001"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -104,17 +125,18 @@ function firstget()
         	<Redirect>connectfail</Redirect>
         </Response>";
     }else{
-        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+    	//用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
-        	<Get action='firstget' numdigits='1' timeout='30'>
+        	<Get action='firstget' numdigits='1' timeout='60'>
         		<Play>main.wav</Play>
         	</Get>
         	<Play>timeout.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
-
+}
+     
 }
 
 //咨询呼叫转接被叫失败
@@ -124,7 +146,7 @@ function connectfail()
     $appid = $_REQUEST['appid'];		//应用id
     $callid = $_REQUEST['callid'];	//通话id，由云通讯平台产生的一路通话的唯一标识   
     //对云通讯平台回调请求的响应包体，放音提示用户后挂机
-    echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>buzy.wav</Play><Hangup/></Response>";
+    echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>buzy.wav</Play><Hangup/></Response>";     
 }
 
 //被叫(被咨询侧)挂机
@@ -160,7 +182,7 @@ function calltimeoverurl()
     	</Get>
     	<Play>timeoutbye.wav</Play>
     	<Hangup/>
-    </Response>";
+    </Response>";  
 }
 
 //用户按键进行评价
@@ -171,12 +193,12 @@ function pingjia()
     $callid = $_REQUEST['callid'];	//通话id，由云通讯平台产生的一路通话的唯一标识
     $digits = $_REQUEST['digits'];	//用户按键内容
     //对云通讯平台回调请求的响应包体，响应的是放音提示用户后挂机
-    echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>thank.wav</Play><Hangup/></Response>";
+    echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>thank.wav</Play><Hangup/></Response>";     
 }
 
 //IVR结束业务，在用户挂机后由云通讯平台发起的回调请求
 function stopservice()
-{
+{    
     //获取参数
     $appid = $_REQUEST['appid'];											//应用id
     $callid = $_REQUEST['callid'];										//通话id，由云通讯平台产生的一路通话的唯一标识
@@ -197,3 +219,4 @@ function stopservice()
 }
 
 ?>
+
