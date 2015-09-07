@@ -99,7 +99,7 @@ function firstget()
         	<Redirect>connectfail</Redirect>
         </Response>";
     }
-    elseif($digits=="300002"){
+    elseif($digits=="100002"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
