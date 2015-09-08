@@ -95,7 +95,11 @@ function gettimeout()
 
 function oneget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00001"){
     echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -117,7 +121,11 @@ function oneget(){
 
 function twoget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00002"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -139,7 +147,11 @@ function twoget(){
 
 function threeget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00003"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -161,7 +173,11 @@ function threeget(){
 
 function fourget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00004"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -183,7 +199,11 @@ function fourget(){
 
 function fiveget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00005"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -205,7 +225,11 @@ function fiveget(){
 
 function sixget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00006"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -227,7 +251,11 @@ function sixget(){
 
 function sevenget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00007"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -249,7 +277,11 @@ function sevenget(){
 
 function eightget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00008"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
@@ -271,7 +303,11 @@ function eightget(){
 
 function nineget(){
     global $number;
-    if(true){
+    //获取参数
+    $appid = $_REQUEST['appid'];        //应用id
+    $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
+    $digits = $_REQUEST['digits'];    //用户按键内容
+    if($digits == "00009"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
         	<Play loop='-1'>wait.wav</Play>
