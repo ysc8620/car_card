@@ -25,6 +25,32 @@ if(strpos($ref,'startservice')){        //云通讯IVR启动业务的回调请�
     pingjia();
 }elseif(strpos($ref,'stopservice')){//云通讯IVR结束业务的回调请求，请求的url中固定相对地址stopservice
     stopservice();
+}elseif(strpos($ref,'oneget')){
+    oneget();
+}
+elseif(strpos($ref,'twoget')){
+    twoget();
+}
+elseif(strpos($ref,'threeget')){
+    threeget();
+}
+elseif(strpos($ref,'fourget')){
+    fourget();
+}
+elseif(strpos($ref,'fiveget')){
+    fiveget();
+}
+elseif(strpos($ref,'sixget')){
+    sixget();
+}
+elseif(strpos($ref,'sevenget')){
+    sevenget();
+}
+elseif(strpos($ref,'eightget')){
+    eightget();
+}
+elseif(strpos($ref,'nineget')){
+    nineget();
 }
 //IVR启动业务，在IVR呼入或者IVR外呼后由云通讯平台发起的回调请求
 function startservice()
@@ -66,6 +92,205 @@ function gettimeout()
     	<Hangup/>
     </Response>";
 }
+
+function oneget(){
+    global $number;
+    if(true){
+    echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function twoget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function threeget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function fourget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function fiveget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function sixget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function sevenget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function eightget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
+function nineget(){
+    global $number;
+    if(true){
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
+        	<Play loop='-1'>wait.wav</Play>
+        	</ConsultationCall>
+        	<Redirect>connectfail</Redirect>
+        </Response>";
+    }else{
+        //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
+        echo "<?xml version='1.0' encoding='UTF-8'?>
+        <Response>
+        	<Get action='firstget' numdigits='1' timeout='30'>
+        		<Play>main.wav</Play>
+        	</Get>
+        	<Play>timeout.wav</Play>
+        	<Redirect>gettimeout</Redirect>
+        </Response>";
+    }
+}
+
 //用户按键
 function firstget()
 {
@@ -75,14 +300,15 @@ function firstget()
     $callid = $_REQUEST['callid'];    //通话id，由云通讯平台产生的一路通话的唯一标识
     $digits = $_REQUEST['digits'];    //用户按键内容
     //对云通讯平台回调请求的响应包体
-    if ($digits=="1"){
+    if ($digits=="0"){
         //用户按1键后响应的播放语音，语音播放完成后挂机
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Play>muzic.wav</Play>
         	<Hangup/>
         </Response>";
-    }else if($digits=="2"){
+    }
+  /*  else if($digits=="2"){
         //用户按2键后响应的咨询呼叫命令，在呼叫被叫的同时进行放音，被叫超时没有接听调整到副命令connectfail进行回调
         //命令中action='dtmfreport'为自定义按键回调相对地址
         //number='$number'为呼叫的咨询侧的号码，可以是手机、固话或者云通讯平台的voip号
@@ -106,12 +332,35 @@ function firstget()
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
-    }
+    }*/
     else{
+        $numdigits = 5;
+        if($digits == "1"){
+            $action = 'oneget';
+        }elseif($digits == "2"){
+            $action = 'twoget';
+        }elseif($digits == "3"){
+            $action = 'threeget';
+        }elseif($digits == "4"){
+            $action = 'fourget';
+        }elseif($digits == "5"){
+            $action = 'fiveget';
+        }elseif($digits == "6"){
+            $action = 'sixget';
+        }elseif($digits == "7"){
+            $action = 'sevenget';
+        }elseif($digits == "8"){
+            $action = 'eightget';
+        }elseif($digits == "9"){
+            $action = 'nineget';
+        }else{
+            $action = 'firstget';
+            $numdigits = 1;
+        }
         //用户按1和2之外的其他按键响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
-        	<Get action='firstget' numdigits='5' timeout='30'>
+        	<Get action='$action' numdigits='$numdigits' timeout='30'>
         		<Play>main.wav</Play>
         	</Get>
         	<Play>timeout.wav</Play>
