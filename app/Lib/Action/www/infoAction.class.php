@@ -16,10 +16,13 @@ class infoAction extends frontendAction {
             if(empty($call_number['info_id'])){
                 return header("Location: /register?id=$id&r=$r");// $this->redirect('register/index',array('id'=>$id,'r'=>$r));
             }else{
+
                 $info = M('user_info')->find($call_number['info_id']);
-                $this->assign('info', $info);
-                // 显示
-                $this->display();
+                $_SESSION['user_id'] = $info['id'];
+                return header("Location: /user");
+//                $this->assign('info', $info);
+//                // 显示
+//                $this->display();
             }
         }else{
             return $this->redirect('/');
