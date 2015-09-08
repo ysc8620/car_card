@@ -1,0 +1,32 @@
+<include file="public:header" />
+<body class="bg-fff">
+<!-- 公用头 -->
+<include file="public:nav" />
+<div class="clear">
+</div>
+<!-- 按变速箱 start -->
+<div class="main">
+    <div class="remark" style="padding: 6px;">
+        品牌绑定成功。<br />
+        请选择您的爱车品牌和型号，方便他人扫码后确认车型
+    </div>
+
+    <div class="title01 fn-mt" id="brandA" name="brandA">
+        <h3>{$brand_info['name']}</h3>
+    </div>
+    <div class="find-listbrand" data-type="brand">
+        <php>$j=0;</php>
+        <volist name="car_list" id="car" >
+
+<if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/bindinfo',array('id'=>$car['id']))}">{$car['name']}</a>
+                <php>$j++;</php>
+                <if condition="(($j%3) eq 0)"></div></if>
+
+        </volist>
+    </div>
+
+
+</div>
+<!-- 公用底 -->
+
+<include file="public:footer" />

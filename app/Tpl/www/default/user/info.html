@@ -1,0 +1,27 @@
+<include file="public:header" />
+<body class="bg-fff">
+<!-- 公用头 -->
+<include file="public:nav" />
+<div class="clear">
+</div>
+<!-- 按变速箱 start -->
+
+<div class="wrap wrap-b10">
+    <h2 class="btn-one btn-gray"><i style="font-size:22px;" class="fa fa-qrcode"></i> 车名片</h2>
+
+    <div class="card_remark" style=" text-align: left">
+        您已经完成这张名片的绑定。快把<br />
+        二维码贴上吧。
+    </div>
+
+    <div class="card_remark" >
+        <img src="/qrcode.php?id={$call_number['id']}&r={$call_number['rand_info_num']}&t=1" />
+    </div>
+
+    <div class="card_remark" style=" text-align: left">
+        扫描面向车内的二维码，您可以更新您的联系方式，冰享受违章查询，上门洗车，保养等优质服务。
+    </div>
+
+</div>
+<!-- 公用底 -->
+<include file="public:footer" />

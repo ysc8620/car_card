@@ -19,8 +19,6 @@
         <li><a href="#brandL" class="btn btn-big">L<i class="spa"></i>M<i class="spa"></i>N</a></li>
         <li><a href="#brandO" class="btn btn-big">O<i class="spa"></i>P<i class="spa"></i>Q<i class="spa"></i>R<i class="spa"></i>S</a></li>
         <li><a href="#brandT" class="btn btn-big">T<i class="spa"></i>W<i class="spa"></i>X<i class="spa"></i>Y<i class="spa"></i>Z</a></li>
-        <li><a href="javascript:void(0);" data-name="s" id="l_history" class="btn btn-big btn-disabled">我浏览的</a></li>
-        <li><a href="javascript:void(0);" id="l_hotbrand" class="btn btn-big btn-selected">热门品牌</a></li>
     </ul>
 </div>
 
@@ -36,148 +34,258 @@
         <h3>A</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/34/#pvareaid=103225">阿尔法罗密欧</a><a href="/brand/35/#pvareaid=103225">阿斯顿·马丁</a><a href="/brand/221/#pvareaid=103225">安凯客车</a></div><div class="brandbox"><a href="/brand/33/#pvareaid=103225">奥迪</a></div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'A'">
+<if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php>
+                <if condition="(($j%3) eq 0)"></div></if>
+            </if>
+        </volist>
     </div>
 
     <div class="title01 " id="brandB" name="brandB">
         <h3>B</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/140/#pvareaid=103225">巴博斯</a><a href="/brand/120/#pvareaid=103225">宝骏</a><a href="/brand/15/#pvareaid=103225">宝马</a></div><div class="brandbox"><a href="/brand/40/#pvareaid=103225">保时捷</a><a href="/brand/27/#pvareaid=103225">北京</a><a href="/brand/203/#pvareaid=103225">北汽幻速</a></div><div class="brandbox"><a href="/brand/173/#pvareaid=103225">北汽绅宝</a><a href="/brand/143/#pvareaid=103225">北汽威旺</a><a href="/brand/208/#pvareaid=103225">北汽新能源</a></div><div class="brandbox"><a href="/brand/154/#pvareaid=103225">北汽制造</a><a href="/brand/36/#pvareaid=103225">奔驰</a><a href="/brand/95/#pvareaid=103225">奔腾</a></div><div class="brandbox"><a href="/brand/14/#pvareaid=103225">本田</a><a href="/brand/75/#pvareaid=103225">比亚迪</a><a href="/brand/13/#pvareaid=103225">标致</a></div><div class="brandbox"><a href="/brand/38/#pvareaid=103225">别克</a><a href="/brand/39/#pvareaid=103225">宾利</a><a href="/brand/37/#pvareaid=103225">布加迪</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'B'">
+                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php>
+                <if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>
+          </div>
 
     <div class="title01 " id="brandC" name="brandC">
         <h3>C</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/79/#pvareaid=103225">昌河</a><a href="/brand/76/#pvareaid=103225">长安</a><a href="/brand/163/#pvareaid=103225">长安商用</a></div><div class="brandbox"><a href="/brand/77/#pvareaid=103225">长城</a><a href="/brand/196/#pvareaid=103225">成功汽车</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'C'">
+                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+<php>$j++;</php>
+<if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>  </div>
 
     <div class="title01 " id="brandD" name="brandD">
         <h3>D</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/169/#pvareaid=103225">DS</a><a href="/brand/92/#pvareaid=103225">大发</a><a href="/brand/1/#pvareaid=103225">大众</a></div><div class="brandbox"><a href="/brand/41/#pvareaid=103225">道奇</a><a href="/brand/32/#pvareaid=103225">东风</a><a href="/brand/187/#pvareaid=103225">东风风度</a></div><div class="brandbox"><a href="/brand/113/#pvareaid=103225">东风风神</a><a href="/brand/165/#pvareaid=103225">东风风行</a><a href="/brand/142/#pvareaid=103225">东风小康</a></div><div class="brandbox"><a href="/brand/81/#pvareaid=103225">东南</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'D'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+<php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
 
     <div class="title01 " id="brandF" name="brandF">
         <h3>F</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/42/#pvareaid=103225">法拉利</a><a href="/brand/11/#pvareaid=103225">菲亚特</a><a href="/brand/3/#pvareaid=103225">丰田</a></div><div class="brandbox"><a href="/brand/141/#pvareaid=103225">福迪</a><a href="/brand/197/#pvareaid=103225">福汽启腾</a><a href="/brand/8/#pvareaid=103225">福特</a></div><div class="brandbox"><a href="/brand/96/#pvareaid=103225">福田</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'F'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
 
     <div class="title01 " id="brandG" name="brandG">
         <h3>G</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/112/#pvareaid=103225">GMC</a><a href="/brand/152/#pvareaid=103225">观致</a><a href="/brand/116/#pvareaid=103225">光冈</a></div><div class="brandbox"><a href="/brand/82/#pvareaid=103225">广汽传祺</a><a href="/brand/108/#pvareaid=103225">广汽吉奥</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'G'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
 
     <div class="title01 " id="brandH" name="brandH">
         <h3>H</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/24/#pvareaid=103225">哈飞</a><a href="/brand/181/#pvareaid=103225">哈弗</a><a href="/brand/150/#pvareaid=103225">海格</a></div><div class="brandbox"><a href="/brand/86/#pvareaid=103225">海马</a><a href="/brand/43/#pvareaid=103225">悍马</a><a href="/brand/164/#pvareaid=103225">恒天</a></div><div class="brandbox"><a href="/brand/91/#pvareaid=103225">红旗</a><a href="/brand/237/#pvareaid=103225">华利</a><a href="/brand/85/#pvareaid=103225">华普</a></div><div class="brandbox"><a href="/brand/220/#pvareaid=103225">华颂</a><a href="/brand/87/#pvareaid=103225">华泰</a><a href="/brand/97/#pvareaid=103225">黄海</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'H'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>  </div>
 
     <div class="title01 " id="brandJ" name="brandJ">
         <h3>J</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/46/#pvareaid=103225">Jeep</a><a href="/brand/25/#pvareaid=103225">吉利汽车</a><a href="/brand/84/#pvareaid=103225">江淮</a></div><div class="brandbox"><a href="/brand/119/#pvareaid=103225">江铃</a><a href="/brand/210/#pvareaid=103225">江铃集团轻汽</a><a href="/brand/44/#pvareaid=103225">捷豹</a></div><div class="brandbox"><a href="/brand/83/#pvareaid=103225">金杯</a><a href="/brand/145/#pvareaid=103225">金龙</a><a href="/brand/175/#pvareaid=103225">金旅</a></div><div class="brandbox"><a href="/brand/151/#pvareaid=103225">九龙</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'J'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
 
     <div class="title01 " id="brandK" name="brandK">
         <h3>K</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/109/#pvareaid=103225">KTM</a><a href="/brand/156/#pvareaid=103225">卡尔森</a><a href="/brand/224/#pvareaid=103225">卡升</a></div><div class="brandbox"><a href="/brand/199/#pvareaid=103225">卡威</a><a href="/brand/101/#pvareaid=103225">开瑞</a><a href="/brand/47/#pvareaid=103225">凯迪拉克</a></div><div class="brandbox"><a href="/brand/214/#pvareaid=103225">凯翼</a><a href="/brand/219/#pvareaid=103225">康迪</a><a href="/brand/100/#pvareaid=103225">科尼赛克</a></div><div class="brandbox"><a href="/brand/9/#pvareaid=103225">克莱斯勒</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'K'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
 
     <div class="title01 " id="brandL" name="brandL">
         <h3>L</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/241/#pvareaid=103225">LOCAL MOTORS</a><a href="/brand/48/#pvareaid=103225">兰博基尼</a><a href="/brand/118/#pvareaid=103225">劳伦士</a></div><div class="brandbox"><a href="/brand/54/#pvareaid=103225">劳斯莱斯</a><a href="/brand/215/#pvareaid=103225">雷丁</a><a href="/brand/52/#pvareaid=103225">雷克萨斯</a></div><div class="brandbox"><a href="/brand/10/#pvareaid=103225">雷诺</a><a href="/brand/124/#pvareaid=103225">理念</a><a href="/brand/80/#pvareaid=103225">力帆</a></div><div class="brandbox"><a href="/brand/89/#pvareaid=103225">莲花汽车</a><a href="/brand/78/#pvareaid=103225">猎豹汽车</a><a href="/brand/51/#pvareaid=103225">林肯</a></div><div class="brandbox"><a href="/brand/53/#pvareaid=103225">铃木</a><a href="/brand/204/#pvareaid=103225">陆地方舟</a><a href="/brand/88/#pvareaid=103225">陆风</a></div><div class="brandbox"><a href="/brand/49/#pvareaid=103225">路虎</a><a href="/brand/50/#pvareaid=103225">路特斯</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'L'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
 
     <div class="title01 " id="brandM" name="brandM">
         <h3>M</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/20/#pvareaid=103225">MG</a><a href="/brand/56/#pvareaid=103225">MINI</a><a href="/brand/58/#pvareaid=103225">马自达</a></div><div class="brandbox"><a href="/brand/57/#pvareaid=103225">玛莎拉蒂</a><a href="/brand/55/#pvareaid=103225">迈巴赫</a><a href="/brand/129/#pvareaid=103225">迈凯伦</a></div><div class="brandbox"><a href="/brand/168/#pvareaid=103225">摩根</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'M'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>  </div>
 
     <div class="title01 " id="brandN" name="brandN">
         <h3>N</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/130/#pvareaid=103225">纳智捷</a><a href="/brand/213/#pvareaid=103225">南京金龙</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'N'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>   </div>
 
     <div class="title01 " id="brandO" name="brandO">
         <h3>O</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/60/#pvareaid=103225">讴歌</a><a href="/brand/59/#pvareaid=103225">欧宝</a><a href="/brand/146/#pvareaid=103225">欧朗</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'O'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
 
     <div class="title01 " id="brandQ" name="brandQ">
         <h3>Q</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/26/#pvareaid=103225">奇瑞</a><a href="/brand/122/#pvareaid=103225">启辰</a><a href="/brand/62/#pvareaid=103225">起亚</a></div><div class="brandbox"><a href="/brand/235/#pvareaid=103225">前途</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'Q'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
     <div class="title01 " id="brandR" name="brandR">
         <h3>R</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/63/#pvareaid=103225">日产</a><a href="/brand/19/#pvareaid=103225">荣威</a><a href="/brand/174/#pvareaid=103225">如虎</a></div><div class="brandbox"><a href="/brand/103/#pvareaid=103225">瑞麒</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'R'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
 
     <div class="title01 " id="brandS" name="brandS">
         <h3>S</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/45/#pvareaid=103225">smart</a><a href="/brand/64/#pvareaid=103225">萨博</a><a href="/brand/68/#pvareaid=103225">三菱</a></div><div class="brandbox"><a href="/brand/149/#pvareaid=103225">陕汽通家</a><a href="/brand/155/#pvareaid=103225">上汽大通</a><a href="/brand/66/#pvareaid=103225">世爵</a></div><div class="brandbox"><a href="/brand/90/#pvareaid=103225">双环</a><a href="/brand/69/#pvareaid=103225">双龙</a><a href="/brand/162/#pvareaid=103225">思铭</a></div><div class="brandbox"><a href="/brand/65/#pvareaid=103225">斯巴鲁</a><a href="/brand/238/#pvareaid=103225">斯达泰克</a><a href="/brand/67/#pvareaid=103225">斯柯达</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'S'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
     <div class="title01 " id="brandT" name="brandT">
         <h3>T</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/202/#pvareaid=103225">泰卡特</a><a href="/brand/133/#pvareaid=103225">特斯拉</a><a href="/brand/161/#pvareaid=103225">腾势</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'T'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
     <div class="title01 " id="brandW" name="brandW">
         <h3>W</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/102/#pvareaid=103225">威麟</a><a href="/brand/99/#pvareaid=103225">威兹曼</a><a href="/brand/192/#pvareaid=103225">潍柴英致</a></div><div class="brandbox"><a href="/brand/70/#pvareaid=103225">沃尔沃</a><a href="/brand/114/#pvareaid=103225">五菱汽车</a><a href="/brand/167/#pvareaid=103225">五十铃</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'W'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
     <div class="title01 " id="brandX" name="brandX">
         <h3>X</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/98/#pvareaid=103225">西雅特</a><a href="/brand/12/#pvareaid=103225">现代</a><a href="/brand/185/#pvareaid=103225">新凯</a></div><div class="brandbox"><a href="/brand/71/#pvareaid=103225">雪佛兰</a><a href="/brand/72/#pvareaid=103225">雪铁龙</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'X'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
     <div class="title01 " id="brandY" name="brandY">
         <h3>Y</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/111/#pvareaid=103225">野马汽车</a><a href="/brand/110/#pvareaid=103225">一汽</a><a href="/brand/144/#pvareaid=103225">依维柯</a></div><div class="brandbox"><a href="/brand/73/#pvareaid=103225">英菲尼迪</a><a href="/brand/93/#pvareaid=103225">永源</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'Y'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
     <div class="title01 " id="brandZ" name="brandZ">
         <h3>Z</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/206/#pvareaid=103225">知豆</a><a href="/brand/22/#pvareaid=103225">中华</a><a href="/brand/74/#pvareaid=103225">中兴</a></div><div class="brandbox"><a href="/brand/94/#pvareaid=103225">众泰</a></div>
-    </div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'Z'">
+                <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
 
 </div>
 <!-- 公用底 -->
