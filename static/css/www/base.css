@@ -919,3 +919,8 @@ input.btn:hover{ background: #e3e3e3; border: 1px #ccc solid;}
 
 .close_dialog{ float: right; font-size: 16px; cursor: pointer; padding: 4px;}
 .msg{color: #ff0000;}
+
+.user_block{ border:#ddd 1px solid; margin:0 auto; width: 200px; display:inline-block; padding:10px; text-align:left; background:#fff; margin:6px auto;}
+.block_box{ width: 100%; clear: both; margin: 10px auto;}
+.block_box div.info_block{ float: left; width: 22%; margin: 8px;}
+.info_block{ border:#ddd 1px solid; margin:0 auto; display:inline-block; padding:6px; text-align:left; background:#fff; margin:6px auto;}
