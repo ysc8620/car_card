@@ -6,6 +6,7 @@ class registerAction extends frontendAction {
         if($_SESSION['user_id'] > 0){
             return header("Location: /user");
         }
+
         $id = intval( $this->_param('id') );
         $r = strval( $this->_param('r') );
         $msg = strval($this->_param('msg'));
@@ -13,7 +14,8 @@ class registerAction extends frontendAction {
             $call_number = M('call_number')->find($id);
             $this->assign('call_number', $call_number);
             if($call_number['rand_info_num'] != $r){
-                return $this->redirect('/');
+                #return $this->redirect('/');
+                return $this->error('您注册邀请没通过验证.','/');
             }
 
             if(empty($call_number['info_id'])){
@@ -25,7 +27,7 @@ class registerAction extends frontendAction {
                 return header("Location: /user?id=$id&r=$r");//$this->redirect('/user?id='.$id.'&r='.$r);
             }
         }else{
-            $this->display();
+            return $this->error('暂时没有开放注册.','/');
         }
     }
 
@@ -44,11 +46,11 @@ class registerAction extends frontendAction {
             }
             // 重新注册
             if(empty($mobile) || empty($code)){
-                return header("Location: /register?id=$id&r=$r&msg=error&msg_code=101");// $this->redirect('/register?id='.$id.'&r='.$r.'&msg=error');
+                return $this->error("请正确输入手机号和验证码", "/register?id=$id&r=$");//header("Location: /register?id=$id&r=$r&msg=error&msg_code=101");// $this->redirect('/register?id='.$id.'&r='.$r.'&msg=error');
             }
 
             if(!String::isMobile($mobile)){
-                return header("Location: /register?id=$id&r=$r&msg=error&msg_code=102");
+                return $this->error("请正确输入手机号","/register?id=$id&r=$");
             }
             $salt = String::randString(10);
             //
@@ -57,14 +59,14 @@ class registerAction extends frontendAction {
             if($info_id){
                 $r = M('call_number')->where(array('id'=>$id))->save(array('info_id'=>$info_id, 'state'=>1));
                 if(!$r){
-                    return header("Location: /register?id=$id&r=$r&msg=error&msg_code=104");
+                    return $this->error("用户绑定不成功","/register?id=$id&r=$");
                 }
             }else{
-                return header("Location: /register?id=$id&r=$r&msg=error&msg_code=103");
+                return $this->error("用户注册不成功","/register?id=$id&r=$");
             }
 
             $_SESSION['user_id'] = $info_id;
-            $this->redirect('/');
+            $this->redirect('/register');
 
         }else{
             $this->redirect('/');
