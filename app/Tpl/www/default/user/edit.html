@@ -9,11 +9,29 @@
 <div class="wrap wrap-b10">
 
     <div class="user_block" >
-        <a href="{:U('user/edit')}">
-        <span style="float: left">{$brand_info['name']} {$car_info['name']}<br />
-        车主电话： {$user_info['mobile']}
+        <a href="{:U('user/edit_mobile')}">
+        <span style="float: left;">
+        车主电话：{$user_info['mobile']}
             </span>
-        <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
+        <span style="float: right;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
+        </a>
+    </div>
+
+    <div class="user_block" >
+        <a href="{:U('user/edit_brand')}">
+        <span style="float: left">
+        车型：{$brand_info['name']} {$car_info['name']}<br />
+            </span>
+            <span style="float: right;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
+        </a>
+    </div>
+
+    <div class="user_block" >
+        <a href="{:U('user/edit_car')}">
+        <span style="float: left">
+        车牌： {$user_info['mobile']}
+            </span>
+            <span style="float: right; "><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
         </a>
     </div>
     <!--

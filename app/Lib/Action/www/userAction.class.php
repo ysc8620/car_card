@@ -2,6 +2,20 @@
 class userAction extends checkuserAction {
     
     public function index() {
+        $user_id = $_SESSION['user_id'];
+        $user_info = M('user_info')->find($user_id);
+
+        if($user_info['brand_id']){
+            $brand_info = M('brand')->find($user_info['brand_id']);
+            $this->assign('brand_info', $brand_info);
+        }
+
+        if($user_info['car_id']){
+            $car_info = M('info')->find($user_info['car_id']);
+            $this->assign('car_info', $car_info);
+        }
+
+        $this->assign('user_info', $user_info);
         $this->display();
     }
 
@@ -75,4 +89,53 @@ class userAction extends checkuserAction {
         $this->display();
     }
 
+    function edit(){
+        $user_id = $_SESSION['user_id'];
+        $user_info = M('user_info')->find($user_id);
+
+        if($user_info['brand_id']){
+            $brand_info = M('brand')->find($user_info['brand_id']);
+            $this->assign('brand_info', $brand_info);
+        }
+
+        if($user_info['car_id']){
+            $car_info = M('info')->find($user_info['car_id']);
+            $this->assign('car_info', $car_info);
+        }
+
+        $this->assign('user_info', $user_info);
+        $this->display();
+    }
+
+    function edit_mobile(){
+        $user_id = $_SESSION['user_id'];
+        $user_info = M('user_info')->find($user_id);
+
+        $this->assign('user_info', $user_info);
+        $this->display();
+    }
+
+    function edit_brand(){
+        $user_id = $_SESSION['user_id'];
+        $user_info = M('user_info')->find($user_id);
+
+        $this->assign('user_info', $user_info);
+        $this->display();
+    }
+
+    function edit_info(){
+        $user_id = $_SESSION['user_id'];
+        $user_info = M('user_info')->find($user_id);
+
+        $this->assign('user_info', $user_info);
+        $this->display();
+    }
+
+    function edit_car(){
+        $user_id = $_SESSION['user_id'];
+        $user_info = M('user_info')->find($user_id);
+
+        $this->assign('user_info', $user_info);
+        $this->display();
+    }
 }

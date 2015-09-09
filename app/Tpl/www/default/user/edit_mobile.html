@@ -1,0 +1,126 @@
+<include file="public:header" />
+<body class="bg-fff">
+<!-- 公用头 -->
+<include file="public:nav" />
+<div class="clear">
+</div>
+<!-- 按变速箱 start -->
+
+<div class="wrap wrap-b10">
+    <h2 class="btn-one btn-gray"> 修改手机</h2>
+
+    <div class="reg_block">
+        <form method="post" action="{:U('user/do_mobile')}" onsubmit="return check()">
+            <div class="text">
+                <input type="text" class="text" name="mobile" value="" placeholder="手机号" /> <span class="msg msg_mobile"></span>
+            </div>
+            <div class="text">
+                <input type="text" class="text" name="code" value="" placeholder="验证码" maxlength="6" /> <input type="button" class="btn getcode" name="getcode" value="获取验证码" />
+                <br /> <span class="msg msg_code"></span>
+            </div>
+            <div class="text"><input type="submit" class="btn" value="确认绑定"></div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    /*
+     用途：检查输入手机号码是否正确
+     输入：strMobile：字符串
+     返回：如果通过验证返回true,否则返回false
+     */
+    function checkMobile( strMobile )
+    {
+        var regu = /^[1][3-9][0-9]{9}$/;
+        var re = new RegExp(regu);
+        if (re.test(strMobile)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
+    function checkCode( strCode )
+    {
+        var regu = /^[0-9]{6}$/;
+        var re = new RegExp(regu);
+        if (re.test(strCode)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    var times = 0;
+    $('input[name="getcode"]').click(function(){
+        if(times > 0){
+            return false;
+        }
+
+        var mobile = $('input[name="mobile"]').val();
+        if(!checkMobile(mobile)){
+            $('.msg_mobile').text('请正确输入手机号.');
+            return false;
+        }else{
+            $('.msg_mobile').text('');
+        }
+
+        $.post("/index.php?m=register&a=getcode", { mobile_no:mobile},
+                function(data){
+                    //alert(data.msg_code);
+                    if(data == '100001'){
+                        mobileMsg();
+                    }else{
+                        alert('请不要频繁获取验证码');
+                    }
+                },'json');
+
+    });
+
+    function mobileMsg(){
+        if(times<60){
+            $('.getcode').val('还剩'+(60-times)+'秒');
+            times = times + 1;
+            setTimeout(function(){mobileMsg()}, 1000);
+        }else{
+            times = 0;
+            $('.getcode').val('获取验证码');
+        }
+
+    }
+
+    function check(){
+        var mobile = $('input[name="mobile"]').val();
+        var code = $('input[name="code"]').val();
+        if(!checkMobile(mobile)){
+
+            $('.msg_mobile').text('请正确输入手机号.');
+            return false;
+        }else{
+            $('.msg_mobile').text('');
+        }
+
+        if(!checkCode(code)){
+            $('.msg_code').text('请正确输入验证码.');
+            return false;
+        }else{
+            $('.msg_code').text('');
+        }
+
+
+        return true;
+    }
+
+    $('.call_dialog').click(function(){
+        $('.call_dialog_block_bg').show();
+        $('.call_dialog_block').show();
+    });
+
+    $('.close_dialog').click(function(){
+        $('.call_dialog_block').hide();
+        $('.call_dialog_block_bg').hide();
+    });
+</script>
+<!-- 公用底 -->
+<include file="public:footer" />
