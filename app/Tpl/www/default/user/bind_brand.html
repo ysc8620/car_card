@@ -27,7 +27,14 @@
         <h3>热门品牌</h3>
     </div>
     <div class="find-listbrand" data-type="brand">
-        <div class="brandbox"><a href="/brand/1/#pvareaid=103229">大众</a><a href="/brand/3/#pvareaid=103229">丰田</a><a href="/brand/8/#pvareaid=103229">福特</a></div><div class="brandbox"><a href="/brand/12/#pvareaid=103229">现代</a><a href="/brand/13/#pvareaid=103229">标致</a><a href="/brand/14/#pvareaid=103229">本田</a></div><div class="brandbox"><a href="/brand/15/#pvareaid=103229">宝马</a><a href="/brand/25/#pvareaid=103229">吉利汽车</a><a href="/brand/33/#pvareaid=103229">奥迪</a></div><div class="brandbox"><a href="/brand/36/#pvareaid=103229">奔驰</a><a href="/brand/38/#pvareaid=103229">别克</a><a href="/brand/58/#pvareaid=103229">马自达</a></div><div class="brandbox"><a href="/brand/62/#pvareaid=103229">起亚</a><a href="/brand/63/#pvareaid=103229">日产</a><a href="/brand/71/#pvareaid=103229">雪佛兰</a></div><div class="brandbox"><a href="/brand/75/#pvareaid=103229">比亚迪</a><a href="/brand/76/#pvareaid=103229">长安</a><a href="/brand/77/#pvareaid=103229">长城</a></div><div class="brandbox"><a href="/brand/84/#pvareaid=103229">江淮</a><a href="/brand/181/#pvareaid=103229">哈弗</a></div>
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.is_hot eq '1'">
+                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php>
+                <if condition="(($j%3) eq 0)"></div></if>
+    </if>
+    </volist>
     </div>
 
     <div class="title01 fn-mt" id="brandA" name="brandA">

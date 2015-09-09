@@ -1,4 +1,4 @@
-<include file="public:header" />
+<include file="public:header" xmlns="http://www.w3.org/1999/html"/>
 <body class="bg-fff">
 <!-- 公用头 -->
 <include file="public:nav" />
@@ -6,39 +6,296 @@
 </div>
 <!-- 按变速箱 start -->
 
-<div class="wrap wrap-b10">
-
-    <div class="user_block" >
-        <a href="{:U('user/edit_mobile')}">
-        <span style="float: left">
-        车主电话：{$user_info['mobile']}
-            </span>
-        <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
+<!-- 按变速箱 start -->
+<div class="main">
+    <div class="remark" style="padding: 6px;">
+        请选择您的爱车品牌和型号，方便他人扫码后确认车型
+    </div>
+    <div class="find-siftanchor">
+        <h3>请按拼音首字母选品牌</h3>
+        <ul>
+            <li><a href="#brandA" class="btn btn-big">A<i class="spa"></i>B<i class="spa"></i>C</a></li>
+            <li><a href="#brandD" class="btn btn-big">D<i class="spa"></i>E<i class="spa"></i>F<i class="spa"></i>G</a></li>
+            <li><a href="#brandH" class="btn btn-big">H<i class="spa"></i>I<i class="spa"></i>J<i class="spa"></i>K</a></li>
+            <li><a href="#brandL" class="btn btn-big">L<i class="spa"></i>M<i class="spa"></i>N</a></li>
+            <li><a href="#brandO" class="btn btn-big">O<i class="spa"></i>P<i class="spa"></i>Q<i class="spa"></i>R<i class="spa"></i>S</a></li>
+            <li><a href="#brandT" class="btn btn-big">T<i class="spa"></i>W<i class="spa"></i>X<i class="spa"></i>Y<i class="spa"></i>Z</a></li>
+        </ul>
     </div>
 
-    <div class="user_block" >
-        <a href="{:U('user/edit_brand')}">
-        <span style="float: left">
-        车型：{$brand_info['name']} {$car_info['name']}<br />
-            </span>
-            <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
+
+    <div class="title01 fn-mt" data-type="brand">
+        <h3>热门品牌</h3>
+    </div>
+    <div class="find-listbrand" data-type="brand">
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.is_hot eq '1'">
+                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php>
+                <if condition="(($j%3) eq 0)"></div></if>
+    </if>
+    </volist>
     </div>
 
-    <div class="user_block" >
-        <a href="{:U('user/edit_car')}">
-        <span style="float: left">
-        车牌： {$user_info['mobile']}
-            </span>
-            <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
+    <div class="title01 fn-mt" id="brandA" name="brandA">
+        <h3>A</h3>
     </div>
-    <!--
-    <div class="block_box">
-        <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div>
-    </div>
-    -->
+    <div class="find-listbrand" data-type="brand">
+        <php>$j=0;</php>
+        <volist name="brand_list" id="brand" >
+            <if condition="$brand.letter eq 'A'">
+                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <php>$j++;</php>
+                <if condition="(($j%3) eq 0)"></div></if>
+    </if>
+    </volist>
 </div>
+
+<div class="title01 " id="brandB" name="brandB">
+    <h3>B</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'B'">
+            <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php>
+            <if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>
+</div>
+
+<div class="title01 " id="brandC" name="brandC">
+    <h3>C</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'C'">
+            <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php>
+            <if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>  </div>
+
+<div class="title01 " id="brandD" name="brandD">
+    <h3>D</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'D'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
+
+<div class="title01 " id="brandF" name="brandF">
+    <h3>F</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'F'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
+
+<div class="title01 " id="brandG" name="brandG">
+    <h3>G</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'G'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
+
+<div class="title01 " id="brandH" name="brandH">
+    <h3>H</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'H'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>  </div>
+
+<div class="title01 " id="brandJ" name="brandJ">
+    <h3>J</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'J'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
+
+<div class="title01 " id="brandK" name="brandK">
+    <h3>K</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'K'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist> </div>
+
+<div class="title01 " id="brandL" name="brandL">
+    <h3>L</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'L'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
+
+<div class="title01 " id="brandM" name="brandM">
+    <h3>M</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'M'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>  </div>
+
+<div class="title01 " id="brandN" name="brandN">
+    <h3>N</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'N'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>   </div>
+
+<div class="title01 " id="brandO" name="brandO">
+    <h3>O</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'O'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
+
+<div class="title01 " id="brandQ" name="brandQ">
+    <h3>Q</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'Q'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+<div class="title01 " id="brandR" name="brandR">
+    <h3>R</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'R'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>    </div>
+
+<div class="title01 " id="brandS" name="brandS">
+    <h3>S</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'S'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+<div class="title01 " id="brandT" name="brandT">
+    <h3>T</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'T'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+<div class="title01 " id="brandW" name="brandW">
+    <h3>W</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'W'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+<div class="title01 " id="brandX" name="brandX">
+    <h3>X</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'X'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+<div class="title01 " id="brandY" name="brandY">
+    <h3>Y</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'Y'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+<div class="title01 " id="brandZ" name="brandZ">
+    <h3>Z</h3>
+</div>
+<div class="find-listbrand" data-type="brand">
+    <php>$j=0;</php>
+    <volist name="brand_list" id="brand" >
+        <if condition="$brand.letter eq 'Z'">
+            <if condition="($j%3) eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+            <php>$j++;</php><if condition="(($j%3) eq 0)"></div></if>
+</if>
+</volist>     </div>
+
+</div>
+
 <!-- 公用底 -->
 <include file="public:footer" />

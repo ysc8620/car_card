@@ -90,6 +90,7 @@ class userAction extends checkuserAction {
     }
 
     function edit(){
+        $this->assign('back_url', U('user/index'));
         $user_id = $_SESSION['user_id'];
         $user_info = M('user_info')->find($user_id);
 
@@ -108,6 +109,7 @@ class userAction extends checkuserAction {
     }
 
     function edit_mobile(){
+        $this->assign('back_url', U('user/edit'));
         $user_id = $_SESSION['user_id'];
         $user_info = M('user_info')->find($user_id);
 
@@ -116,14 +118,14 @@ class userAction extends checkuserAction {
     }
 
     function edit_brand(){
-        $user_id = $_SESSION['user_id'];
-        $user_info = M('user_info')->find($user_id);
-
-        $this->assign('user_info', $user_info);
+        $this->assign('back_url', U('user/edit'));
+        $brand_list = M('brand')->order('letter')->select();
+        $this->assign('brand_list', $brand_list);
         $this->display();
     }
 
     function edit_info(){
+        $this->assign('back_url', U('user/edit'));
         $user_id = $_SESSION['user_id'];
         $user_info = M('user_info')->find($user_id);
 
@@ -132,6 +134,7 @@ class userAction extends checkuserAction {
     }
 
     function edit_car(){
+        $this->assign('back_url', U('user/edit'));
         $user_id = $_SESSION['user_id'];
         $user_info = M('user_info')->find($user_id);
 
