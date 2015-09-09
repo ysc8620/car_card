@@ -7,38 +7,20 @@
 <!-- 按变速箱 start -->
 
 <div class="wrap wrap-b10">
+    <h2 class="btn-one btn-gray">车辆信息</h2>
 
-    <div class="user_block" >
-        <a href="{:U('user/edit_mobile')}">
-        <span style="float: left">
-        车主电话：{$user_info['mobile']}
-            </span>
-        <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
+    <div class="reg_block">
+        <form method="post" action="{:U('user/do_car')}" >
+            <div class="text">
+                <input type="text" class="text" name="car_number" value="{$user_info['car_number']}" style="width: 240px;" placeholder="车牌号码" /> <span class="msg msg_car"></span>
+            </div>
+            <div class="text">
+                <input type="text" class="text" name="engine_number" value="{$user_info['engine_number']}" style="width: 240px;" placeholder="发动机号" /> <span class="msg msg_engine"></span>
+            </div>
+            <div class="text"><input type="submit" class="btn" value="保存"></div>
+        </form>
     </div>
-
-    <div class="user_block" >
-        <a href="{:U('user/edit_brand')}">
-        <span style="float: left">
-        车型：{$brand_info['name']} {$car_info['name']}<br />
-            </span>
-            <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
-    </div>
-
-    <div class="user_block" >
-        <a href="{:U('user/edit_car')}">
-        <span style="float: left">
-        车牌： {$user_info['mobile']}
-            </span>
-            <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
-    </div>
-    <!--
-    <div class="block_box">
-        <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div>
-    </div>
-    -->
 </div>
+
 <!-- 公用底 -->
 <include file="public:footer" />

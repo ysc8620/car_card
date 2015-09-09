@@ -6,39 +6,25 @@
 </div>
 <!-- 按变速箱 start -->
 
-<div class="wrap wrap-b10">
-
-    <div class="user_block" >
-        <a href="{:U('user/edit_mobile')}">
-        <span style="float: left">
-        车主电话：{$user_info['mobile']}
-            </span>
-        <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
+<div class="main">
+    <div class="remark" style="padding: 6px;">
+        请选择您的爱车品牌和型号，方便他人扫码后确认车型
     </div>
 
-    <div class="user_block" >
-        <a href="{:U('user/edit_brand')}">
-        <span style="float: left">
-        车型：{$brand_info['name']} {$car_info['name']}<br />
-            </span>
-            <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
+    <div class="title01 fn-mt" id="brandA" name="brandA">
+        <h3>{$brand_info['name']}</h3>
     </div>
+    <div class="find-listbrand" data-type="brand">
+        <php>$j=0;</php>
+        <volist name="car_list" id="car" >
+            <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_info',array('id'=>$car['id']))}">{$car['name']}</a>
+            <php>$j++;</php>
+            <if condition="(($j%3) eq 0)"></div></if>
 
-    <div class="user_block" >
-        <a href="{:U('user/edit_car')}">
-        <span style="float: left">
-        车牌： {$user_info['mobile']}
-            </span>
-            <span style="float: right; margin-top: 16px;"><i style="font-size:18px;" class="fa fa-angle-right"></i></span>
-        </a>
-    </div>
-    <!--
-    <div class="block_box">
-        <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div><div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div> <div class="info_block"><i style="font-size:14px;" class="fa fa-qrcode"></i> 违章查询</div>
-    </div>
-    -->
+    </volist>
+        </div>
+
+
 </div>
 <!-- 公用底 -->
 <include file="public:footer" />

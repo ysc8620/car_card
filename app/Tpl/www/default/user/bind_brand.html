@@ -30,7 +30,7 @@
         <php>$j=0;</php>
         <volist name="brand_list" id="brand" >
             <if condition="$brand.is_hot eq '1'">
-                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/do_brand',array('id'=>$brand['id']))}">{$brand['name']}</a>
+                <if condition="$j%3 eq 0"><div class="brandbox"></if><a href="{:U('user/bindbrand',array('id'=>$brand['id']))}">{$brand['name']}</a>
                 <php>$j++;</php>
                 <if condition="(($j%3) eq 0)"></div></if>
     </if>
