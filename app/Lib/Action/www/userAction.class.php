@@ -109,6 +109,7 @@ class userAction extends checkuserAction {
     }
 
     function edit_mobile(){
+        //echo U('user/index',array('id'=>'11', 'r'=>'22'));
         $this->assign('back_url', U('user/edit'));
         $user_id = $_SESSION['user_id'];
         $user_info = M('user_info')->find($user_id);

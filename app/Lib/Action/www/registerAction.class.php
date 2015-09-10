@@ -13,7 +13,7 @@ class registerAction extends frontendAction {
         if($id){
             $call_number = M('call_number')->find($id);
             $this->assign('call_number', $call_number);
-            if($call_number['rand_info_num'] != $r){
+            if($call_number['rand_info_num'] != $r && $call_number['rand_card_num'] != $r){
                 #return $this->redirect('/');
                 return $this->error('您注册邀请没通过验证.','/');
             }
@@ -41,7 +41,7 @@ class registerAction extends frontendAction {
         if($id){
             $call_number = M('call_number')->find($id);
             $this->assign('call_number', $call_number);
-            if($call_number['rand_info_num'] != $r){
+            if($call_number['rand_info_num'] != $r && $call_number['rand_card_num'] != $r){
                 return $this->redirect('/');
             }
 
