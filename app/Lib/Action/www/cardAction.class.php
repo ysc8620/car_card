@@ -7,13 +7,13 @@ class cardAction extends frontendAction {
         if($id){
             $call_number = M('call_number')->find($id);
 
-
             $this->assign('call_number', $call_number);
             if($call_number['rand_card_num'] != $r){
                 return $this->redirect('/');
             }
 
             if(empty($call_number['info_id'])){
+                return $this->redirect(U('register/index',array('id'=>$id, 'r'=>$r)));
                 $this->assign('state', 0);
                 // 提示扫描B面完成用户绑定
                 $this->display('prompt');
