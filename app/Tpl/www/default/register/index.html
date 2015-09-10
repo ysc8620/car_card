@@ -56,13 +56,8 @@
         }
     };
     var times = 0;
-    var bools = false;
     $('input[name="getcode"]').click(function(){
         if(times > 0){
-            return false;
-        }
-
-        if(bools){
             return false;
         }
 
@@ -73,7 +68,7 @@
         }else{
             $('.msg_mobile').text('');
         }
-        $('.getcode').val('获取中。。。');
+        $('.getcode').disable(true);
         $.post("/index.php?m=register&a=getcode", { mobile_no:mobile},
                 function(data){
                     //alert(data.msg_code);
@@ -81,7 +76,7 @@
                         bools = true;
                         mobileMsg();
                     }else{
-                        $('.getcode').val('获取验证码');
+                        $('.getcode').disable(false);
                         alert('请不要频繁获取验证码');
                     }
                 },'json');
@@ -95,7 +90,7 @@
             setTimeout(function(){mobileMsg()}, 1000);
         }else{
             times = 0;
-            bools = false;
+            $('.getcode').disable(false);
             $('.getcode').val('获取验证码');
         }
 
