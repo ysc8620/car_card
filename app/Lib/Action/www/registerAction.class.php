@@ -92,7 +92,7 @@ class registerAction extends frontendAction {
 
             $code = String::randString(6,1);
             $_SESSION['mobile_code'] = $code;
-            sendTemplateSMS($mobile,array('10086','5'),"1");
+            sendTemplateSMS($mobile,array($code,'5'),"1");
             echo 100001;
         }else{
             echo 100002;

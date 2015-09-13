@@ -70,9 +70,9 @@ function startservice()
     echo "<?xml version='1.0' encoding='UTF-8'?>
     <Response>
     	<Get action='firstget' numdigits='1' timeout='30'>
-    		<Play>main.wav</Play>
+    		<Play>m1.wav</Play>
     	</Get>
-    	<Play>timeout.wav</Play>
+    	<Play>m5.wav</Play>
     	<Redirect>gettimeout</Redirect>
     </Response>";
 }
@@ -86,9 +86,9 @@ function gettimeout()
     echo "<?xml version='1.0' encoding='UTF-8'?>
     <Response>
     	<Get action='firstget' numdigits='1' timeout='30'>
-    		<Play>main.wav</Play>
+    		<Play>m1.wav</Play>
     	</Get>
-    	<Play>timeoutbye.wav</Play>
+    	<Play>m6.wav</Play>
     	<Hangup/>
     </Response>";
 }
@@ -102,7 +102,7 @@ function oneget(){
     if($digits == "00001"){
     echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -111,9 +111,9 @@ function oneget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -128,7 +128,7 @@ function twoget(){
     if($digits == "00002"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -137,9 +137,9 @@ function twoget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -154,7 +154,7 @@ function threeget(){
     if($digits == "00003"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -163,9 +163,9 @@ function threeget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -180,7 +180,7 @@ function fourget(){
     if($digits == "00004"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -189,9 +189,9 @@ function fourget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -206,7 +206,7 @@ function fiveget(){
     if($digits == "00005"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -215,9 +215,9 @@ function fiveget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -232,7 +232,7 @@ function sixget(){
     if($digits == "00006"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -241,9 +241,9 @@ function sixget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -258,7 +258,7 @@ function sevenget(){
     if($digits == "00007"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -267,9 +267,9 @@ function sevenget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -284,7 +284,7 @@ function eightget(){
     if($digits == "00008"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -293,9 +293,9 @@ function eightget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -310,7 +310,7 @@ function nineget(){
     if($digits == "00009"){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response><ConsultationCall number='$number' record='true' timeout='30' calltime='120' calltimeoverurl='calltimeoverurl' hangupurl='hangupurl'>
-        	<Play loop='-1'>wait.wav</Play>
+        	<Play loop='-1'>m2.wav</Play>
         	</ConsultationCall>
         	<Redirect>connectfail</Redirect>
         </Response>";
@@ -319,9 +319,9 @@ function nineget(){
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='firstget' numdigits='1' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -397,9 +397,9 @@ function firstget()
         echo "<?xml version='1.0' encoding='UTF-8'?>
         <Response>
         	<Get action='$action' numdigits='$numdigits' timeout='30'>
-        		<Play>main.wav</Play>
+        		<Play>m1.wav</Play>
         	</Get>
-        	<Play>timeout.wav</Play>
+        	<Play>m5.wav</Play>
         	<Redirect>gettimeout</Redirect>
         </Response>";
     }
@@ -412,7 +412,7 @@ function connectfail()
     $appid = $_REQUEST['appid'];		//应用id
     $callid = $_REQUEST['callid'];	//通话id，由云通讯平台产生的一路通话的唯一标识   
     //对云通讯平台回调请求的响应包体，放音提示用户后挂机
-    echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>buzy.wav</Play><Hangup/></Response>";
+    echo "<?xml version='1.0' encoding='UTF-8'?><Response><Play>m4.wav</Play><Hangup/></Response>";
 }
 //被叫(被咨询侧)挂机
 function hangupurl()
@@ -423,12 +423,17 @@ function hangupurl()
     $reason = $_REQUEST['reason'];							//挂机的原因，0为被咨询侧主动挂断
     $callduration = $_REQUEST['callduration'];	//咨询呼叫的通话时长
     //对云通讯平台回调请求的响应包体，响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
-    echo "<?xml version='1.0' encoding='UTF-8'?>
+    /*echo "<?xml version='1.0' encoding='UTF-8'?>
     <Response>
     	<Get action='pingjia' numdigits='1' timeout='20'>
     		<Play loop='-1'>pingjia.wav</Play>
     	</Get>
     	<Play>timeoutbye.wav</Play>
+    	<Hangup/>
+    </Response>";*/
+    echo "<?xml version='1.0' encoding='UTF-8'?>
+    <Response>
+    <Play>m3.wav</Play>
     	<Hangup/>
     </Response>";
 }
@@ -439,12 +444,17 @@ function calltimeoverurl()
     $appid = $_REQUEST['appid'];		//应用id
     $callid = $_REQUEST['callid'];	//通话id，由云通讯平台产生的一路通话的唯一标识
     //对云通讯平台回调请求的响应包体，响应的是按键命令嵌套放音，超时没按键就放音提示用户后挂断用户
-    echo "<?xml version='1.0' encoding='UTF-8'?>
+   /* echo "<?xml version='1.0' encoding='UTF-8'?>
     <Response>
     	<Get action='pingjia' numdigits='1' timeout='20'>
     		<Play loop='-1'>pingjia.wav</Play>
     	</Get>
     	<Play>timeoutbye.wav</Play>
+    	<Hangup/>
+    </Response>";*/
+    echo "<?xml version='1.0' encoding='UTF-8'?>
+    <Response>
+    <Play>m3.wav</Play>
     	<Hangup/>
     </Response>";
 }
