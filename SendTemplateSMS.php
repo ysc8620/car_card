@@ -53,9 +53,9 @@ function sendTemplateSMS($to,$datas,$tempId)
 {
      // 初始化REST SDK
      global $accountSid,$accountToken,$appId,$serverIP,$serverPort,$softVersion;
-    echo "---";
-    echo $accountSid,'"',$accountToken,'"',$appId,'"',$serverIP,'"',$serverPort,'"',$softVersion;
-    die();
+//    echo "---";
+//    echo $accountSid,'"',$accountToken,'"',$appId,'"',$serverIP,'"',$serverPort,'"',$softVersion;
+//    die();
      $rest = new REST($serverIP,$serverPort,$softVersion);
      $rest->setAccount($accountSid,$accountToken);
      $rest->setAppId($appId);
@@ -64,17 +64,17 @@ function sendTemplateSMS($to,$datas,$tempId)
      #echo "Sending TemplateSMS to $to <br/>";
      $result = $rest->sendTemplateSMS($to,$datas,$tempId);
      if($result == NULL ) {
-         echo "result error!";
-         break;
+//         echo "result error!";
+//         break;
          return 200;
      }
      if($result->statusCode!=0) {
-//         return 200;
+         return 200;
          echo "error code :" . $result->statusCode . "<br>";
          echo "error msg :" . $result->statusMsg . "<br>";
 //         //TODO 添加错误处理逻辑
      }else{
-        // return 100;
+         return 100;
          echo "Sendind TemplateSMS success!<br/>";
 //         // 获取返回信息
          $smsmessage = $result->TemplateSMS;
