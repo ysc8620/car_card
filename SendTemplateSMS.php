@@ -47,6 +47,8 @@ function sendTemplateSMS($to,$datas,$tempId)
 {
      // 初始化REST SDK
      global $accountSid,$accountToken,$appId,$serverIP,$serverPort,$softVersion;
+    echo $accountSid,'"',$accountToken,'"',$appId,'"',$serverIP,'"',$serverPort,'"',$softVersion;
+    die();
      $rest = new REST($serverIP,$serverPort,$softVersion);
      $rest->setAccount($accountSid,$accountToken);
      $rest->setAppId($appId);
