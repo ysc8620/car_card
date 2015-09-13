@@ -55,25 +55,26 @@ function sendTemplateSMS($to,$datas,$tempId)
      #echo "Sending TemplateSMS to $to <br/>";
      $result = $rest->sendTemplateSMS($to,$datas,$tempId);
      if($result == NULL ) {
-         #echo "result error!";
-         #break;
+         echo "result error!";
+         break;
          return 200;
      }
      if($result->statusCode!=0) {
-         return 200;
-//         echo "error code :" . $result->statusCode . "<br>";
-//         echo "error msg :" . $result->statusMsg . "<br>";
+//         return 200;
+         echo "error code :" . $result->statusCode . "<br>";
+         echo "error msg :" . $result->statusMsg . "<br>";
 //         //TODO 添加错误处理逻辑
      }else{
-         return 100;
-//         echo "Sendind TemplateSMS success!<br/>";
+        // return 100;
+         echo "Sendind TemplateSMS success!<br/>";
 //         // 获取返回信息
-//         $smsmessage = $result->TemplateSMS;
-//         echo "dateCreated:".$smsmessage->dateCreated."<br/>";
-//         echo "smsMessageSid:".$smsmessage->smsMessageSid."<br/>";
+         $smsmessage = $result->TemplateSMS;
+         echo "dateCreated:".$smsmessage->dateCreated."<br/>";
+         echo "smsMessageSid:".$smsmessage->smsMessageSid."<br/>";
          //TODO 添加成功处理逻辑
      }
 }
+
 
 //Demo调用 
 		//**************************************举例说明***********************************************************************
