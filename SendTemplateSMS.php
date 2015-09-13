@@ -28,7 +28,7 @@ $appId='aaf98f894f4900a3014f4b529bb20304';
 //沙盒环境（用于应用开发调试）：sandboxapp.cloopen.com
 //生产环境（用户应用上线使用）：app.cloopen.com
 $serverIP='sandboxapp.cloopen.com';
-
+echo $serverIP;
 
 //请求端口，生产环境和沙盒环境一致
 $serverPort='8883';
